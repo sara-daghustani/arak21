@@ -7,7 +7,8 @@ gem 'bson_ext'
 
 
 gem "devise"
-
+gem 'bootstrap-sass', '~> 3.3.6'  
+gem 'bootstrap', '~> 4.3.1'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
