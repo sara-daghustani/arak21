@@ -3,8 +3,8 @@ class Appointment
   include Mongoid::Attributes::Dynamic
   field :date, type: Date
   field :time, type: Time
-  field :doctor_id, type: Integer
-  field :patient_id, type: Integer
+  field :doctor_id, type: String
+  field :user_id, type: String
   belongs_to :doctor
-  belongs_to :patient
+  belongs_to :user
 end
