@@ -10,6 +10,13 @@
   </head>
 
   <body>
-    <%= yield %>
+  <%= render 'layouts/nav'%>
+  <%= yield %>
+
+  <footer class="py-2 bg-light">
+  <div class="container">
+    <p class="m-0 text-center text-dark">Copyright &copy;  2019</p>
+  </div>
+</footer>
   </body>
 </html>
