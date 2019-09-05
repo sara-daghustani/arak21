@@ -4,5 +4,5 @@ class Doctor
   field :name, type: String
   field :speciality, type: String
   has_many :appointments
-  has_many :users
+  has_and_belongs_to_many :users
 end
