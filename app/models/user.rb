@@ -1,5 +1,7 @@
 class User
   include Mongoid::Document
+  include Mongoid::Attributes::Dynamic
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -8,6 +10,10 @@ class User
   ## Database authenticatable
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
+  field :first_name,         type: String, default: ""
+  field :last_name,          type: String, default: ""
+  field :phone,              type: String, default: ""
+
 
   ## Recoverable
   field :reset_password_token,   type: String
@@ -34,5 +40,5 @@ class User
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
   has_many :appointments
-  belongs_to :doctors
+  has_many :doctors
 end
