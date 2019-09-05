@@ -10,6 +10,26 @@
   </head>
 
   <body>
+<header class="site-header" role="contentinfo">
+      <div class="container">
+        <div class="row">
+        <span class="d-block">Address: 34 Street Name, City Name Here, United States</span>
+        <span class="d-block">Email: info@yourdomain.com</span>
+            <ul class="list-unstyled header-link d-flex ">
+              <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
+              <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
+              <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+            </ul>
+            </header>
+             <hr>
+<header class="site-header" role="contentinfo">
+      <div class="container">
+        <div class="row">
+        <%=link_to "Logo", home_path, class:"logo"%>
+          <span class="d-block">Call us: +1 242 4942 290</span>
+
+            </header>
+             <hr>
   <%= render 'layouts/nav'%>
   <%= yield %>
 
