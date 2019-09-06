@@ -30,8 +30,8 @@ class AppointmentsController < ApplicationController
     @appointment.appointment_on =  DateTime.new(params[:appointment]["appointment_on(1i)"].to_i, 
     params[:appointment]["appointment_on(2i)"].to_i,
     params[:appointment]["appointment_on(3i)"].to_i,
-    params[:appointment]["appointment_on(4i)"].to_i,
-    params[:appointment]["appointment_on(5i)"].to_i)
+    params[:appointment]["appointment_on(4i)"].to_i)
+    # params[:appointment]["appointment_on(5i)"].to_i
     # @appointment.appointment_on = params[:appointment]
     # new DateTime(data.Year, data.Month, data.Day, data.Hour, data.Minute, 59, 999);
     # @appointment.appointment_on = new_datetime_data_var from params[:appointment]
