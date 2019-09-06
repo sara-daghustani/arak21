@@ -13,6 +13,10 @@
   <strong>description:</strong>
   <%= @doctor.description %>
 </p>
+<p>
+  <strong> img url:</strong>
+  <%= image_tag(@doctor.img, size: "150x150", alt: "Doctor Image") %>
+</p>
 
 <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
 <%= link_to 'Back', doctors_path %>

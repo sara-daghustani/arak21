@@ -15,7 +15,8 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="bg rounded-circle mx-auto text-center" style="width: 150px; height: 150px; margin-top: -45px;">
-                                <%= image_tag("https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png", alt: "Doctor")%>
+                                <%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image") %>
+                                <%# <%= image_tag("https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png", alt: "Doctor")%>
                                 </i>
                                 </div>
                                 <div class="card-body text-center mt-2">
@@ -28,14 +29,14 @@
                         <%# back side%>
                         <div class="backside">
                             <div class="card"> 
-                                <div class="card-body text-right">
-                                    <%= link_to "Delete", doctor_path(doctor), method: :delete, data: {confirm:"Are you sure you want to delete"}%>
-                                    <%= link_to "Edit", edit_doctor_path(doctor)%>
-                                    <%= link_to 'Show', @doctor %>
-                                </div>
                                 <div class="card-body text-center mt-4">
                                     <h4 class="card-title"><%= doctor.name %></h4>
                                     <p class="card-text text-m"> <%= doctor.description %>. </p>
+                                    <div class="card-body text-center">
+                                    <%= link_to "Delete", doctor_path(doctor), method: :delete, data: {confirm:"Are you sure you want to delete"}%>
+                                    <%= link_to "Edit", edit_doctor_path(doctor)%>
+                                    <%= link_to 'Show', @doctor %>
+                                    </div>
                                     <%= link_to new_appointment_path do%>
                                     <span class="text-sm text-uppercase font-weight-bold"> make Appointment </span>
                                     <%end%>                                          
