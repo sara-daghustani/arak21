@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
+    <div class="form-group font-weight-bold">
 
-  <div class="field">
-    <%= form.label :appointment_on %>
-    <%= form.datetime_select :appointment_on %>
-  </div>
+        <div class="col-md-5 mb-2 text-white"> 
+          <%= form.label :doctor_id %> <br>
+          <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %>
+        </div> 
 
-  <div class="field">
-    <%= form.label :doctor_id %>
-    <%= form.text_field :doctor_id %>
-  </div>
+        <div class="col-md-9 mb-2 text-white">
+          <%= form.label :appointment_on %> <br>
+          <%= form.datetime_select :appointment_on %>
+        </div> 
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
+        <div class="col-md-5 mb-2">
+          <%# Submit%>
+          <%= form.submit "Create An Appointment", class:"btn btn-primary my-2"%>
+        </div>
+        
+    </div>
+  <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

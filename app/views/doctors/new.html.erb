@@ -1,5 +1,23 @@
-<h1>New Doctor</h1>
 
-<%= render 'form', doctor: @doctor %>
+<div class="container">  
+   <div class="text-black jumbotron my-4 text-white">
+  <%= link_to 'Back', doctors_path %>
+     <p class="d-flex justify-content-end">
+            <%if user_signed_in?%>
+            Welcome <%= current_user.email%>
+            <%end%>
+      </p>
+      
+      <div class="row align-items-center">
+         <div class="col-lg-5">
+            <h1 class="display-5">Add Doctor</h1>
+            <p><%= render 'form', doctor: @doctor %></p>
+         </div>
+         <div class="col-lg-7">
+            <h1 class=" display-3"> add a doctor</h1>
+            <%=image_tag("",class:"img-fluid rounded" )%>
+         </div>
+      </div>
+   </div>
+</div>
 
-<%= link_to 'Back', doctors_path %>
