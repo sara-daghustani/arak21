@@ -7,34 +7,31 @@
  
   <div class="collapse navbar-collapse col-12 col-md-8" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto ">
-       <li class="nav-item">
-      <%=link_to "Home", home_path, class:"nav-link active"%>
+      <li class="nav-item">
+        <%=link_to "Home", home_path, class:"nav-link active"%>
+      </li>
+      <li class="nav-item">
+       <%=link_to "Appointment", new_appointment_path, class:"nav-link"%> 
+      </li>
+     <li class="nav-item">
+        <%=link_to "Doctor", doctors_path, class:"nav-link"%> 
      </li>
      <li class="nav-item">
-       <%=link_to "AboutUs", home_path, class:"nav-link"%> 
-     </li>
-     <li class="nav-item">
-       <%=link_to "New Appointment", new_appointment_path, class:"nav-link"%> 
-     </li>
-    
-     <li class="nav-item">
-   <%=link_to "Doctor", doctors_path, class:"nav-link"%> 
-     </li>
-  
- <%if user_signed_in? %>
-  <li class="nav-item dropdown">
-    
-       <a class="nav-link dropdown-toggle" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My profile</a>
-       <div class="dropdown-menu" aria-labelledby="dropdown04">
-         <a class="dropdown-item" href="">My Information</a>
+       <%=link_to "AboutUs", aboutus_path, class:"nav-link"%> 
+     </li> 
+    <%if user_signed_in? %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My profile</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown04">
+        <%=link_to "My profile", profile_path, class:"dropdown-item"%>
           <%=link_to "My Appointments", appointments_path, class:"dropdown-item"%>
-         <%=link_to "Sign Out", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
-       </div>
-     </li>
+          <%=link_to "Sign Out", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
+        </div>
+      </li>
    <%else%>
- <li class="nav-item">
-   <%=link_to "Sign In ", new_user_session_path, class:"nav-link"%>  
- </li>
+  <li class="nav-item">
+    <%=link_to "Sign In ", new_user_session_path, class:"nav-link"%>  
+  </li>
  <li class="nav-item">
    <%=link_to "Sign Up", new_user_registration_path, class:"nav-link"%>  
  </li>
