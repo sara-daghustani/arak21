@@ -9,6 +9,10 @@
   <strong>Speciality:</strong>
   <%= @doctor.speciality %>
 </p>
+<p>
+  <strong>description:</strong>
+  <%= @doctor.description %>
+</p>
 
 <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
 <%= link_to 'Back', doctors_path %>

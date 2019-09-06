@@ -3,39 +3,72 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-#team {
-    background: #eee !important;
+
+body{
+    margin-top:20px;
+    background:rgba(238, 238, 238, 0.644);
+}
+.card::after {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 35px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
+    box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
+    content: '';
+    z-index: -1;
+}
+.btn{
+    color: #382E87;
+}
+.bg{
+    background-color: #00B5C3;
+ }
+
+
+.rounded-circle {
+    border-radius: 50% !important;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: #108d6f;
-    border-color: #108d6f;
-    box-shadow: none;
-    outline: none;
+.card-title {
+    margin: 0;
+    font-family: "Montserrat",sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: #382E87;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #007b5e;
-    border-color: #007b5e;
+.card-text {
+    padding-top: 12px;
+    color: #382E87;
 }
 
-section {
-    padding: 60px 0;
+
+.pt-1, .py-1 {
+    padding-top: .25rem !important;
 }
 
-section .section-title {
-    text-align: center;
-    color: #007b5e;
-    margin-bottom: 50px;
-    text-transform: uppercase;
+
+.row{
+    justify-content: center;
+   }
+
+
+.frontside .card,
+.backside .card {
+    min-height: 290px;
+    max-height: 290px;
+    min-width: 300px;
+    max-width: 300px;
+    background-color: rgba(52, 218, 196, 0.158);
+    -webkit-box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+    box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+    // border-color: #382E87;
 }
 
-#team .card {
-    border: none;
-    background: #ffffff;
-}
 
 .image-flip:hover .backside,
 .image-flip.hover .backside {
@@ -107,25 +140,4 @@ section .section-title {
     -ms-transform-style: preserve-3d;
     transition: 1s;
     transform-style: preserve-3d;
-}
-
-.frontside .card,
-.backside .card {
-    min-height: 312px;
-}
-
-.backside .card a {
-    font-size: 18px;
-    color: #007b5e !important;
-}
-
-.frontside .card .card-title,
-.backside .card .card-title {
-    color: #007b5e !important;
-}
-
-.frontside .card .card-body img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
 }

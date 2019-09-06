@@ -1,31 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Appointments</h1>
+<div class="container">  
+  <div class="text-white jumbotron my-5">
+    <p class="d-flex justify-content-between">
+    <%= link_to 'New Appointment', new_appointment_path,  class:"btn btn-light" %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Doctor</th>
-      <th>Patient</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <%if user_signed_in?%>
+      Welcome <%= current_user.email%>
+      <%end%> 
+    </p>  
+    <h1 class=" display-4 text-center text-white">My Appointments</h1>
+        
+    <div class="table-responsive-md">
+      <table class="table" style= "text-align:center;">
+        <thead class="thead">
+          <tr>
+            <th>Doctor</th>
+            <th>speciality</th>
+            <th>Date</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @appointments.each do |appointment| %>
-      <tr>
-        <td><%= appointment.appointment_on %></td>
-        <td><%= appointment.doctor_id %></td>
-        <td><%= appointment.user_id %></td>
-        <td><%= link_to 'Show', appointment %></td>
-        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
-        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @appointments.each do |appointment| %>
+            <tr>
+              <td><%= appointment.doctor_id %></td>
+              <td><%= appointment.doctor.speciality %></td>
+               <td><%= appointment.appointment_on %></td>
+              <td><%= link_to 'Show', appointment %></td>
+              <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+              <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <br>
 
-<%= link_to 'New Appointment', new_appointment_path %>
