@@ -13,6 +13,7 @@ class User
   field :first_name,         type: String, default: ""
   field :last_name,          type: String, default: ""
   field :phone,              type: String, default: ""
+  field :admin,              type: Boolean, default: ""
 
 
   ## Recoverable
