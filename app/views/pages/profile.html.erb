@@ -1,0 +1,21 @@
+
+<p id="notice"><%= notice %></p>
+
+<div class="container">  
+  <div class="text-white jumbotron my-5">
+    <h1 class=" display-4 text-center text-white">Profile</h1>
+    <div class="table-responsive-md">
+      <table class="table" style= "text-align:center;">
+        <thead class="thead">
+        <tr>
+            <td><%= current_user.first_name %></td>
+            <td><%= current_user.last_name %></td>
+            <td><%= current_user.email %></td>
+            <td><%= current_user.phone %></td>
+            <td><%= link_to 'Edit', edit_user_registration_path %></td>
+        </thead>
+      </table>
+    
+    </div>
+  </div>
+</div>
