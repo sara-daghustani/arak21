@@ -1,70 +1,73 @@
 
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag("2.jpg",  class:"d-block img-d", alt:"Second slide") %>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>...</h5>
-            <p>...</p>
-          </div>
+<div class="swiper-container main-slider" id="myCarousel">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide slider-bg-position" style="background:url('https://i.pinimg.com/originals/41/66/5d/41665df6037592629ecd0c1e8833b463.jpg')" data-hash="slide1">
+      <h2>It is health that is real wealth and not pieces of gold and silver</h2>
     </div>
+    <div class="swiper-slide slider-bg-position" style="background:url('https://cdn.pixabay.com/photo/2017/08/07/14/02/people-2604149_960_720.jpg')" data-hash="slide2">
+      <h2>Happiness is nothing more than good health and a bad memory</h2>
+    </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Navigation -->
+  <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
+  <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
+</div>
 
-    <div class="carousel-item">
-      <%= image_tag("1.jpg", class:"d-block img-d", alt:"Third slide") %>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>...</h5>
-        <p>...</p>
+<section class="service-sec" id="benefits">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading">
+      <h2><small>any title here</small>also any small pargarph here </h2>
+    </div>
+        </div>
+      <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-6 text-sm-center service-block"> <i class="fa fa-plus" aria-hidden="true"></i>
+          <h3>Better Sleep</h3>
+          <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe.</p>
+        </div>
+        <div class="col-md-6 text-sm-center service-block"> <i class="fa fa-leaf" aria-hidden="true"></i>
+          <h3>Reduces Weight</h3>
+          <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe.</p>
+        </div>
+        <div class="col-md-6 text-sm-center service-block"> <i class="fa fa-leaf" aria-hidden="true"></i>
+          <h3>Improves Mood</h3>
+          <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe.</p>
+        </div>
+        <div class="col-md-6 text-sm-center service-block"> <i class="fa fa-bell" aria-hidden="true"></i>
+          <h3>Boosts Energy</h3>
+          <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe.</p>
+        </div>
+        </div>
+      </div>
+      
+    <!-- /.row --> 
+  </div>
+</section>
+</section>
+<!-- About 
+    ================================================== -->
+<section class="about-sec parallax-section" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h2><small>Who We Are</small>About<br>
+          Our Blog</h2>
+      </div>
+      <div class="col-md-4">
+        <p>To enjoy good health, to bring true happiness to one's family, to bring peace to all, one must first discipline and control one's own mind. If a man can control his mind he can find the way to Enlightenment, and all wisdom and virtue will naturally come to him.</p>
+        <p>Saving our planet, lifting people out of poverty, advancing economic growth... these are one and the same fight. We must connect the dots between climate change, water scarcity, energy shortages, global health, food security and women's empowerment. Solutions to one problem must be solutions for all.</p>
+      </div>
+      <div class="col-md-4">
+        <p>Our greatest happiness does not depend on the condition of life in which chance has placed us, but is always the result of a good conscience, good health, occupation, and freedom in all just pursuits.</p>
+        <p>Being in control of your life and having realistic expectations about your day-to-day challenges are the keys to stress management, which is perhaps the most important ingredient to living a happy, healthy and rewarding life.</p>
+       <%=link_to "المزيد", aboutus_path, class:"nav-link"%> 
       </div>
     </div>
-
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    
-</div>
-
-
-
-<section class="cover-thing first ">
-<div class="card-deck col px-md-5  ">
-<div class="card  ">
-<%= image_tag("003-dental-checkup.png", height: '100', width: '100' ) %>
-  <div class="card-body">
-    <h5 class="card-title black class="text-muted"">Card title</h5>
-    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
-</div>
-<div class="card">
-<%= image_tag("002-teeth.png", height: '100', width: '100' ) %>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-  </div>
-</div>
-<div class="card">
-<%= image_tag("001-dentist-chair.png", height: '100', width: '100' ) %>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-
-  </div>
-</div>
-</div>
 </section>
 
 

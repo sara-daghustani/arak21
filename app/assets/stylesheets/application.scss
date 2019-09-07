@@ -17,29 +17,21 @@
   // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-  }
-  
-  html, body {
-      height: 100%;
-  }
-  
-  body {
-      margin: 0;
-  }
-  
-  .cover-thing {
-      width: 100%;
-      height: 100%;
-      float: left;  
-  }
-  
-  .first {
-      background-color: rgba(255, 255, 255, 0.652);
-      color: white;
-  }
+html, body {
+  height: 100%;
+}
 
- 
+body {
+  margin: 0;
+}
 
- 
+.cover-thing {
+  width: 100%;
+  height: 100%;
+  float: left; 
+
+}
+
+.topnav-right {
+  float: right;
+}
