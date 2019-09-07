@@ -26,7 +26,6 @@ class AppointmentsController < ApplicationController
   def create
     # (params[:appointment])
     @appointment = Appointment.new(appointment_params)
-   
     @appointment.appointment_on =  DateTime.new(params[:appointment]["appointment_on(1i)"].to_i, 
     params[:appointment]["appointment_on(2i)"].to_i,
     params[:appointment]["appointment_on(3i)"].to_i,

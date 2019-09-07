@@ -9,12 +9,12 @@
 
 <p>
   <strong>Doctor:</strong>
-  <%= @appointment.doctor_id.name %>
+  <%= @appointment.doctor.name%>
 </p>
 
 <p>
   <strong>Patient:</strong>
-  <%= @appointment.user_id %>
+  <%= @appointment.user.first_name %>
 </p>
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
