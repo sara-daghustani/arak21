@@ -18,6 +18,12 @@
           <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %>
         </div> 
 
+        <div class="col-md-5 mb-2 text-white"> 
+          <%= form.label :user_id %> <br>
+          <%= form.text_field :user_id %>
+        </div> 
+
+
         <div class="col-md-9 mb-2 text-white">
           <%= form.label :appointment_on %> <br>
           <%= form.datetime_select :appointment_on %>
