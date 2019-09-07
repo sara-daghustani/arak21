@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2019-09-07 14:20:07
+  end_time: 2019-09-07 14:20:07
+  doctor_id: MyString
+  appointment_id: MyString
+
+two:
+  start_time: 2019-09-07 14:20:07
+  end_time: 2019-09-07 14:20:07
+  doctor_id: MyString
+  appointment_id: MyString
