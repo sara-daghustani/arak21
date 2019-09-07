@@ -1,6 +1,31 @@
-<h1>Editing Appointment</h1>
 
-<%= render 'form', appointment: @appointment %>
 
-<%= link_to 'Show', @appointment %> |
-<%= link_to 'Back', appointments_path %>
+
+
+<div class="container">  
+   <div class="text-black jumbotron my-4 text-white">
+        <%= link_to 'Show', @appointment %> |
+        <%= link_to 'Back', appointments_path %>
+     <p class="d-flex justify-content-end">
+            <%if user_signed_in?%>
+            Welcome <%= current_user.email%>
+            <%end%>
+      </p>
+      
+      <div class="row align-items-center">
+         <div class="col-lg-5">
+            <h1 class="display-5">Edit Appointment</h1>
+            <p><%= render 'form', appointment: @appointment %></p>
+         </div>
+         <div class="col-lg-7">
+            <h1 class=" display-3"> Make Appointment</h1>
+            <%=image_tag("",class:"img-fluid rounded" )%>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+
+

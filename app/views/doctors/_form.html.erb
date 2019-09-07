@@ -10,18 +10,28 @@
       </ul>
     </div>
   <% end %>
+  <div class="form-group font-weight-bold">
+        <div class="col-md-5 mb-2 text-white"> 
+          <%= form.label :name %>
+          <%= form.text_field :name %>
+        </div> 
+        
+           <div class="col-md-5 mb-2 text-white"> 
+       <%= form.label :img %>
+        <%= form.text_field :img %>
+        </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+        <div class="col-md-9 mb-2 text-white">
+          <%= form.label :speciality %>
+          <%= form.text_field :speciality %>
+        </div> 
+        <div class="col-md-9 mb-2 text-white">
+          <%= form.label :description %>
+          <%= form.text_field :description %>
+        </div> 
+        <div class="col-md-5 mb-2">
+          <%= form.submit "Add Doctor", class:"btn btn-primary my-2"%>
+        </div>
   </div>
 
-  <div class="field">
-    <%= form.label :speciality %>
-    <%= form.text_field :speciality %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

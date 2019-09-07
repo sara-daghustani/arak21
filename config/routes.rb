@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root "pages#home"
   get "/home", to: "pages#home"
+  get "/aboutus" => "pages#aboutus"
+  get "/profile" => "pages#profile"
   resources :doctors
   resources :appointments
   resources :patients
