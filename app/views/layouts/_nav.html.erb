@@ -1,55 +1,56 @@
-<nav class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps--abv  navbar-light bg-light">
-<div class="d-flex flex-grow-1">
-<span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-<a class="navbar-brand d-none d-lg-inline-block" href="#">
-<%= image_tag("arak-logo.png",alt:"Third slide", height: '70', width: '70',alt:'logo' ) %> 
-</a>
-<a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-<%= image_tag("arak-logo.png",alt:"Third slide", height: '70', width: '70' ,alt:'logo',title:'ARAK') %>
-</a>
-<div class="w-100 text-right">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</div>
-</div>
+<link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+<nav class="navbar navbar-expand-lg mb-4 top-bar  sticky-top navbar-static-top sps sps--abv navbar-light bg-light">
+    <div class="container">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+            <a class="navbar-brand d-none d-lg-inline-block" href="#">
+                <%= image_tag("arak-logo.png",alt:"Third slide", height: '70', width: '70',alt:'logo' ) %>
+            </a>
+            <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+                <%= image_tag("arak-logo.png",alt:"Third slide", height: '70', width: '70' ,alt:'logo',title:'ARAK') %>
+            </a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse1">
+            <ul class="navbar-nav ml-auto">
+                <%if user_signed_in? %>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">صفحتي</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <%=link_to "معلوماتي", profile_path, class:"dropdown-item"%>
+                                <%=link_to "المواعيد", appointments_path, class:"dropdown-item"%>
+                                    <%=link_to "تسجيل الخروج", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
+                        </div>
+                    </li>
+                    <%else%>
+                        <li class="nav-item">
+                            <%=link_to "مستخدم جديد", new_user_registration_path, class:"nav-link"%>
+                        </li>
+                        <li class="nav-item">
+                            <%=link_to "تسجيل الدخول ", new_user_session_path, class:"nav-link"%>
+                        </li>
+                        <%end%>
 
-<div class="collapse navbar-collapse" id="navbarCollapse1">
-<ul class="navbar-nav ml-auto">
-<%if user_signed_in? %>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">صفحتي</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown04">
-          <%=link_to "معلوماتي", profile_path, class:"dropdown-item"%>
-            <%=link_to "مواعيدي", appointments_path, class:"dropdown-item"%>
-            <%=link_to "تسجيل الخروج", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
-          </div>
-        </li>
-     <%else%>
-     <li class="nav-item">
-     <%=link_to "مستخدم جديد", new_user_registration_path, class:"nav-link"%>  
-   </li>
-    <li class="nav-item">
-      <%=link_to "تسجيل الدخول ", new_user_session_path, class:"nav-link"%>  
-    </li>
-   
-   <%end%>
+                            <li class="nav-item">
+                                <%=link_to "المواعيد", new_appointment_path, class:"nav-link"%>
+                            </li>
 
+                            <li class="nav-item">
+                                <%=link_to "الأطباء", doctors_path, class:"nav-link"%>
+                            </li>
+                            <li class="nav-item">
+                                <%=link_to "من نحن", aboutus_path, class:"nav-link"%>
+                            </li>
+                            <li class="nav-item">
+                                <%=link_to "الرئيسيه", home_path, class:"nav-link active"%>
+                            </li>
+                            
 
-<li class="nav-item">
-<%=link_to "المواعيد", new_appointment_path, class:"nav-link"%> 
-</li>
-   
-<li class="nav-item">
-<%=link_to "الأطباء", doctors_path, class:"nav-link"%> 
-</li>
-<li class="nav-item">
-<%=link_to "من نحن", aboutus_path, class:"nav-link"%> 
-</li>
-<li class="nav-item">
-<%=link_to "الرئيسيه", home_path, class:"nav-link active"%>
-</li>
-</ul>
-</div>
+            </ul>
+        </div>
     </div>
 </nav>
