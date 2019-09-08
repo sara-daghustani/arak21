@@ -20,11 +20,12 @@
           <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %>
           <label for="doctor_name">  :  الدكتور  </label><br>
 
-          <%= form.text_field :user_id %>
-        <label for="user_id">  :  المريض  </label><br><br>
-         
-       
+          <%= "Patient" %> <br>
+          <%= current_user.first_name + " " + current_user.last_name%>
+        </div> 
 
+        
+        <%= form.hidden_field :user_id , :value => current_user.id%>
 
         <%= form.datetime_select :appointment_on %>
         <label for="user_id">  :  الموعد في   </label><br><br>

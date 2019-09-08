@@ -4,7 +4,11 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
+    if current_user.admin == true
+    @appointments = Appointment.all
+    else
     @appointments = current_user.appointments
+    end
   end
 
   # GET /appointments/1
