@@ -6,7 +6,7 @@
 <div class="container">
       
         <div class="text-right">
-            <% if current_user.admin == true%>
+            <% if current_user.try(:admin?)%>
              <%= link_to new_doctor_path do %>
                  <i > إضافة دكتور </i >
                  <i class="fa fa-plus"></i>

@@ -4,13 +4,25 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
+    if user_signed_in?
     if current_user.admin == true
-    @appointments = Appointment.all
+    @appointments = Appointment.all.order('appointment_on ASC')
     else
-    @appointments = current_user.appointments
+    @appointments = current_user.appointments.order('appointment_on ASC')
     end
   end
+  end
 
+def byDoctor
+  # if user_signed_in?
+  #   if current_user.admin == true
+  @doctor = Doctor.find_by(name: params[:doctor] )
+  @appointments = Appointment.where({doctor_id: @doctor.id }).order('appointment_on ASC')
+#     else
+
+#     end
+#   end
+ end
   # GET /appointments/1
   # GET /appointments/1.json
   def show
