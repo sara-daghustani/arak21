@@ -2,8 +2,10 @@
 <section class="container pt-3 mb-3">
     <h2 class="h3 block-title text-center">Arak Team </h2>
         <div class="text-right">
+            <% if current_user.admin == true%>
              <%= link_to new_doctor_path do %>
                  <i class="fa fa-plus"> Add A Doctor </i>
+                 <%end%>
             <%end%>
         </div>
     <div class="row pt-5 mt-30">
@@ -33,10 +35,12 @@
                                     <h4 class="card-title"><%= doctor.name %></h4>
                                     <p class="card-text text-m"> <%= doctor.description %>. </p>
                                     <div class="card-body text-center">
+                                    <% if current_user.admin == true %>
                                     <%= link_to "Delete", doctor_path(doctor), method: :delete, data: {confirm:"Are you sure you want to delete"}%>
                                     <%= link_to "Edit", edit_doctor_path(doctor)%>
                                     <%= link_to 'Show', @doctor %>
                                     </div>
+                                    <%end%>
                                     <%= link_to new_appointment_path do%>
                                     <span class="text-sm text-uppercase font-weight-bold"> make Appointment </span>
                                     <%end%>                                          

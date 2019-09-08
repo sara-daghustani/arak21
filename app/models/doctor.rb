@@ -6,6 +6,5 @@ class Doctor
   field :description, type: String
   field :img, type: String
   has_many :appointments
-  has_many :availabilities
   has_and_belongs_to_many :users
 end
