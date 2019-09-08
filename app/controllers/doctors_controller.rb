@@ -13,17 +13,25 @@ class DoctorsController < ApplicationController
   end
 
   # GET /doctors/new
+  # add new doctor if admin is sign in
   def new
+    if current_user.admin == true
     @doctor = Doctor.new
+    end
   end
 
   # GET /doctors/1/edit
   def edit
+    if current_user.admin == true
+    end
   end
 
   # POST /doctors
   # POST /doctors.json
   def create
+    if current_user.admin == true
+    
+
     @doctor = Doctor.new(doctor_params)
 
     respond_to do |format|
@@ -36,17 +44,20 @@ class DoctorsController < ApplicationController
       end
     end
   end
+  end
 
   # PATCH/PUT /doctors/1
   # PATCH/PUT /doctors/1.json
   def update
-    respond_to do |format|
-      if @doctor.update(doctor_params)
-        format.html { redirect_to @doctor, notice: 'Doctor was successfully updated.' }
-        format.json { render :show, status: :ok, location: @doctor }
-      else
-        format.html { render :edit }
-        format.json { render json: @doctor.errors, status: :unprocessable_entity }
+    if current_user.admin == true
+      respond_to do |format|
+        if @doctor.update(doctor_params)
+          format.html { redirect_to @doctor, notice: 'Doctor was successfully updated.' }
+          format.json { render :show, status: :ok, location: @doctor }
+        else
+          format.html { render :edit }
+          format.json { render json: @doctor.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -54,10 +65,12 @@ class DoctorsController < ApplicationController
   # DELETE /doctors/1
   # DELETE /doctors/1.json
   def destroy
-    @doctor.destroy
-    respond_to do |format|
-      format.html { redirect_to doctors_url, notice: 'Doctor was successfully destroyed.' }
-      format.json { head :no_content }
+    if current_user.admin == true
+      @doctor.destroy
+      respond_to do |format|
+        format.html { redirect_to doctors_url, notice: 'Doctor was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
   end
 
