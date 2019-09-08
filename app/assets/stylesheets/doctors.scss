@@ -4,51 +4,88 @@
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-body{
-    margin-top:20px;
-    background:rgba(238, 238, 238, 0.644);
-}
-.card::after {
-    display: block;
-    position: absolute;
-    bottom: -10px;
-    left: 20px;
-    width: calc(100% - 40px);
-    height: 35px;
-    background-color: #fff;
-    -webkit-box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
-    box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
-    content: '';
-    z-index: -1;
-}
-.btn{
-    color: #382E87;
-}
-.bg{
-    background-color: #00B5C3;
- }
 
-
-.rounded-circle {
-    border-radius: 50% !important;
-}
-
-.card-title {
-    margin: 0;
-    font-family: "Montserrat",sans-serif;
-    font-size: 18px;
-    font-weight: 900;
-    color: #382E87;
-}
-
-.card-text {
-    padding-top: 12px;
-    color: #382E87;
+.card {
+    padding-top: 20px;
+    margin: 10px 0 20px 0;
+    background-color: rgba(214, 224, 226, 0.2);
+    border-top-width: 0;
+    border-bottom-width: 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
-.pt-1, .py-1 {
-    padding-top: .25rem !important;
+
+.card .card-body {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+
+
+
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(214, 224, 226, 0.2);
+}
+
+.card.hovercard .cardheader {
+    background-color: beige;
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .avatar {
+    position: relative;
+    top: -50px;
+    margin-bottom: -50px;
+}
+
+.card.hovercard .avatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.5);
+}
+
+.card.hovercard .info {
+    padding: 4px 8px 10px;
+}
+
+.card.hovercard .info .title {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 1;
+    color: #262626;
+    vertical-align: middle;
+}
+
+.card.hovercard .info .desc {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+
+.card.hovercard .bottom {
+    padding: 0 20px;
+    margin-bottom: 17px;
 }
 
 
@@ -59,14 +96,10 @@ body{
 
 .frontside .card,
 .backside .card {
-    min-height: 290px;
-    max-height: 290px;
-    min-width: 300px;
-    max-width: 300px;
-    background-color: rgba(52, 218, 196, 0.158);
-    -webkit-box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
-    box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
-    // border-color: #382E87;
+    min-height: 300px;
+    max-height: 300px;
+    min-width: 250px;
+    max-width: 250px;
 }
 
 
@@ -119,9 +152,6 @@ body{
     -o-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
-    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
 }
 
 .frontside,
@@ -140,29 +170,4 @@ body{
     -ms-transform-style: preserve-3d;
     transition: 1s;
     transform-style: preserve-3d;
-}
-.card .stats-container{
-	width: 100%;
-	margin-top: 50px;
-}
-.card .stats{
-	display: block;
-	float: left;
-	width: 33.333333%;
-	text-align: center;
-}
-
-.card .stats:first-child{
-	border-right: 1px solid #EEEEEE;
-}
-.card .stats:last-child{
-	border-left: 1px solid #EEEEEE;
-}
-.card .stats h4{
-		font-family: 'Arima Madurai', cursive;
-	font-weight: 300;
-	margin-bottom: 5px;
-}
-.card .stats p{
-	color: #777777;
 }

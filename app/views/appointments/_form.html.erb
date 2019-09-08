@@ -1,3 +1,5 @@
+
+<div class="text-right">
 <%= form_with(model: appointment, local: true) do |form| %>
   <% if appointment.errors.any? %>
     <div id="error_explanation">
@@ -10,15 +12,14 @@
       </ul>
     </div>
   <% end %>
-<%= current_user.first_name%>
-    <div class="form-group font-weight-bold">
 
-        <div class="col-md-5 mb-2 text-white"> 
-          <%= form.label :doctor_id %> <br>
+    <div class="form-group font-weight-bold ">
+
+       
+       
           <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %>
-        </div> 
+          <label for="doctor_name">  :  الدكتور  </label><br>
 
-        <div class="col-md-5 mb-2 text-white"> 
           <%= "Patient" %> <br>
           <%= current_user.first_name + " " + current_user.last_name%>
         </div> 
@@ -26,16 +27,17 @@
         
         <%= form.hidden_field :user_id , :value => current_user.id%>
 
-        <div class="col-md-9 mb-2 text-white">
-          <%= form.label :appointment_on %> <br>
-          <%= form.datetime_select :appointment_on %>
-        </div> 
+        <%= form.datetime_select :appointment_on %>
+        <label for="user_id">  :  الموعد في   </label><br><br>
+         
+      
 
-        <div class="col-md-5 mb-2">
+       
           <%# Submit%>
-          <%= form.submit "Create An Appointment", class:"btn btn-primary my-2"%>
-        </div>
+          <%= form.submit "إنشاء موعد ", class:"btn btn-outline-secondary my-2"%><br>
+        
         
     </div>
   <% end %>
 
+</div>
