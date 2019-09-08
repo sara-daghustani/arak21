@@ -1,21 +1,30 @@
+<div class="card border-dark mb-3 mx-auto text-right" style="width: 40rem;" >
+<div class="card-body">
+  <h5 class="card-title text-center"> </h5> 
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @appointment.appointment_on %>
+<%= @appointment.appointment_on %>
+  <strong>  : التاريخ </strong>
+
 </p>
 
 
 
 <p>
-  <strong>Doctor:</strong>
+  
   <%= @appointment.doctor.name%>
+  <strong>  : الدكتور  </strong>
 </p>
 
 <p>
-  <strong>Patient:</strong>
+<strong> المريض :</strong>
   <%= @appointment.user.first_name %>
+
 </p>
 
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+<%= link_to 'تعديل', edit_appointment_path(@appointment) %> |
+<%= link_to 'رجوع', appointments_path %>
+</div>
+</div>

@@ -2,56 +2,66 @@
 <div class="card-body">
   <h5 class="card-title text-center"> فريقنا </h5>
 <p id="notice"><%= notice %></p>
-<section class="container pt-3 mb-3">
-   
+
+<div class="container">
+        <h2 class="h3 block-title text-center">Arak Team </h2>
         <div class="text-right">
              <%= link_to new_doctor_path do %>
                  <i class="fa fa-plus"> Add A Doctor </i>
             <%end%>
         </div>
-    <div class="row pt-5 mt-30">
-        <% @doctors.each do |doctor| %>
-            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
-                <div class="image-flip">
-                    <div class="mainflip">
-                        <%# front side  %>
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="bg rounded-circle mx-auto text-center" style="width: 150px; height: 150px; margin-top: -45px;">
+
+    <div class="row">
+     <% @doctors.each do |doctor| %>
+        <div class="col-lg-3 col-sm-6">
+            <div class="image-flip">
+                <div class="mainflip">
+                    <div class="frontside">
+                        <div class="card hovercard">
+                            <div class="cardheader">
+                            </div>
+                            <div class="avatar">
                                 <%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image") %>
-                                <%# <%= image_tag("https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png", alt: "Doctor")%>
-                                </i>
+                            </div>
+                            <div class="info">
+                                <div class="title">
+                                    <h2><%= doctor.name %></h2>
                                 </div>
-                                <div class="card-body text-center mt-2">
-                                    <h3 class="card-title pt-1"><%= doctor.name %></h3>
-                                    <p class="card-text text-m"><%= doctor.speciality %></p>
-                                </div>
+                                <div class="desc"><%= doctor.speciality %></div>
                             </div>
                         </div>
-                        <%# end of front side%>
-                        <%# back side%>
-                        <div class="backside">
-                            <div class="card"> 
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title"><%= doctor.name %></h4>
-                                    <p class="card-text text-m"> <%= doctor.description %>. </p>
-                                    <div class="card-body text-center">
-                                    <%= link_to "Delete", doctor_path(doctor), method: :delete, data: {confirm:"Are you sure you want to delete"}%>
-                                    <%= link_to "Edit", edit_doctor_path(doctor)%>
-                                    <%= link_to 'Show', @doctor %>
-                                    </div>
-                                    <%= link_to new_appointment_path do%>
-                                    <span class="text-sm text-uppercase font-weight-bold"> make Appointment </span>
-                                    <%end%>                                          
+                    </div>
+
+                    <div class="backside">
+                          <div class="card hovercard">
+                            <div class="cardheader">
+                             <%= link_to "Delete", doctor_path(doctor), method: :delete, data: {confirm:"Are you sure you want to delete"}%>
+                                 <%= link_to "Edit", edit_doctor_path(doctor)%>
+                                 <%= link_to 'Show', @doctor %> 
+                            </div>
+                            <div class="avatar">
+                                <%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image") %>
+                            </div>
+                            <div class="info">
+                                <div class="title">
+                                    <h5><%= doctor.name %></h5>
                                 </div>
-                            </div>  
-                        </div>
+                                <div class="desc"><%= doctor.description %></div>
+                               
+                            </div>
+                            <hr>
+                            <div class="bottom">
+                                <%= link_to "Appointment", new_appointment_path, class:"button" %> <br>    
+                            </div> 
+                              
+                        </div>  
                     </div>
                 </div>
             </div>
+        </div>
         <%end%>
     </div>
-</section>
+</div>
 
     </div>
     </div>                

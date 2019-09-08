@@ -29,12 +29,13 @@
 <tbody>
   <% @appointments.each do |appointment| %>
     <tr scope="row" >
+    <td><%= link_to 'إظهار', appointment %></td>
+    <td><%= link_to 'تعديل', edit_appointment_path(appointment) %></td>
+    <td><%= link_to 'حذف', appointment, method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
+    <td><%= appointment.appointment_on %></td>
+    <td><%= appointment.doctor.speciality %></td>
       <td><%= appointment.doctor.name%></td>
-      <td><%= appointment.doctor.speciality %></td>
-       <td><%= appointment.appointment_on %></td>
-      <td><%= link_to 'Show', appointment %></td>
-      <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
-      <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    
     </tr>
   <% end %>
 </tbody>
