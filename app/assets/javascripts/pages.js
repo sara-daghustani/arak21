@@ -4,7 +4,6 @@
 
 
 
-
 /*------- Smooth Scroll -------*/
 
 $('a[href^="#"]').on('click', function(event) {

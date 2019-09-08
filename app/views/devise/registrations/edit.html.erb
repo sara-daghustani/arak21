@@ -1,27 +1,27 @@
-<div class="card border-dark mb-3 mx-auto" style="width: 40rem;" >
-  <div class="card-body">
-    <h5 class="card-title text-center">My Profile</h5>
+<div class="card border-dark mb-3 mx-auto text-right" style="width: 35rem;" >
+<div class="card-body">
+  <h5 class="card-title text-center"> تعديل البيانات  </h5>
 <h4>Edit <%= resource_name.to_s.humanize %></h4>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
 <div class="field">
-    <%= f.label :first_name %><br />
+<label for="first_name">الاسم الأول </label><br />
     <%= f.text_field :first_name, autofocus: true, autocomplete: "first name" %>
   </div>
 
   <div class="field">
-    <%= f.label :last_name %><br />
+  <label for="last_name"> الأسم الأخير </label><br />
     <%= f.text_field :last_name, autofocus: true, autocomplete: "first name" %>
   </div>
   <div class="field">
-    <%= f.label :phone %><br />
+  <label for="phone_number"> رقم الهاتف </label><br />
     <%= f.text_field :phone, autofocus: true, autocomplete: "phone" %>
   </div>
   
   <div class="field">
-    <%= f.label :email %><br />
+  <label for="email"> البريد الإلكتروني  </label><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
@@ -30,7 +30,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <i>(اتركه فارغ في حال عدم الرغبة بالتغيير)</i>
+  <label for="password"> كلمة المرور </label> <br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
@@ -39,22 +40,23 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+  <label for="password_confirmation"> تأكيد كلمة المرور  </label><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <i>(نحتاج كلمة المرور الحاليه لإجراء التغييرات )</i>
+  <label for="password_confirmation">  كلمة المرور الحاليه</label> <br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "تحديث" %>
 
   </div>
 
 <% end %>
-<%= link_to 'Back', profile_path %> &nbsp;
-<%= link_to 'Delete My Account', registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %> 
+<%= link_to 'رجوع', profile_path %> &nbsp;
+<%= link_to 'حذف حسابي', registration_path(resource_name), data: { confirm: "هل آنت متأكد أنك تريد حذف حسابك ؟" }, method: :delete %> 
 </div>
 </div>

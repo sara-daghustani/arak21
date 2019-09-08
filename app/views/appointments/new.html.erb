@@ -6,7 +6,7 @@
   <p class="d-flex justify-content-between">
      <%= link_to 'رجوع', appointments_path %>
      <%if user_signed_in?%>
-     ! مرحباً  <%= current_user.first_name%> 
+     ! مرحباً  <%= current_user.first_name + " "+current_user.last_name%> 
         <%end%>
         </p>
        <h1 class="display-5">إنشاء موعد </h1>
