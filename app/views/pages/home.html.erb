@@ -1,22 +1,46 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
-<div class="swiper-container main-slider" id="myCarousel">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide slider-bg-position" style="background:url('https://www.smilemichigan.com/portals/public/Images/Background/ParallaxHeader_FindaDentist.png')" data-hash="slide1">
-      <h2>It is health that is real wealth and not pieces of gold and silver</h2>
-    </div>
-    <div class="swiper-slide slider-bg-position" style="background:url('https://cdn.pixabay.com/photo/2017/08/07/14/02/people-2604149_960_720.jpg')" data-hash="slide2">
-      <h2>Happiness is nothing more than good health and a bad memory</h2>
-    </div>
-  </div>
-  <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
+<link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+
+<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= image_tag("3.jpg", class:" d-block img-d", alt:"First slide") %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>...</h5>
+              <p>...</p>
+            </div>
+          </div>
+​
+​
+          <div class="carousel-item ">
+          <%= image_tag("2.jpg",  class:"d-block img-d", alt:"Second slide") %>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>...</h5>
+              <p>...</p>
+            </div>
+          </div>
+​
+          <div class="carousel-item ">
+              <%= image_tag("1.jpg", class:"d-block img-d", alt:"Third slide") %>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>...</h5>
+                <p>...</p>
+              </div>
+          </div>
+      </div>
+​ <div class="swiper-pagination"></div>
   <!-- Add Navigation -->
-  <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
-  <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
+  <div class="swiper-button-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"></i></div>
+  <div class="swiper-button-next" href="#carouselExampleIndicators" role="button" data-slide="next"></div>
 </div>
+</div>
+
 
 <section class="service-sec" id="benefits">
   <div class="container">
