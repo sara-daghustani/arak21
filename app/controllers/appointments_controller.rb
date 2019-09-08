@@ -4,12 +4,15 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
+    if user_signed_in?
     if current_user.admin == true
     @appointments = Appointment.all
     else
     @appointments = current_user.appointments
     end
   end
+  end
+
 
   # GET /appointments/1
   # GET /appointments/1.json

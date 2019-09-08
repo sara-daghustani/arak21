@@ -25,9 +25,11 @@
     <th scope="col">التاريخ</th>
     <th scope="col">التخصص</th>
     <th scope="col">الدكتور</th>
+       <%if user_signed_in?%> 
     <%if current_user.admin == true%>
     <th scope="col">المريض</th>
     <%end%>
+
     
   </tr>
 </thead
@@ -45,7 +47,8 @@
     <td><%= appointment.user.first_name%><td>
 
     <%end%>
-    
+     <%end%>
+
     </tr>
   <% end %>
 </tbody>
