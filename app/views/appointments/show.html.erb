@@ -19,9 +19,8 @@
 </p>
 
 <p>
-<strong> المريض :</strong>
-  <%= @appointment.user.first_name %>
-
+  <strong> المريض: </strong>
+  <%= current_user.first_name %>
 </p>
 
 <%= link_to 'تعديل', edit_appointment_path(@appointment) %> |
