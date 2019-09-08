@@ -25,6 +25,14 @@ class AvailabilitiesController < ApplicationController
   # POST /availabilities.json
   def create
     @availability = Availability.new(availability_params)
+    @availability.start_time =  DateTime.new(params[:availability]["start_time(1i)"].to_i, 
+    params[:availability]["start_time(2i)"].to_i,
+    params[:availability]["start_time(3i)"].to_i,
+    params[:availability]["start_time(4i)"].to_i)
+    @availability.end_time =  DateTime.new(params[:availability]["end_time(1i)"].to_i, 
+    params[:availability]["end_time(2i)"].to_i,
+    params[:availability]["end_time(3i)"].to_i,
+    params[:availability]["end_time(4i)"].to_i)
 
     respond_to do |format|
       if @availability.save

@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :doctor_id %>
-    <%= form.text_field :doctor_id %>
+    <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %>
   </div>
 
   <div class="field">

@@ -18,7 +18,7 @@
       <tr>
         <td><%= availability.start_time %></td>
         <td><%= availability.end_time %></td>
-        <td><%= availability.doctor_id %></td>
+        <td><%= availability.doctor.name %></td>
         <td><%= availability.appointment_id %></td>
         <td><%= link_to 'Show', availability %></td>
         <td><%= link_to 'Edit', edit_availability_path(availability) %></td>

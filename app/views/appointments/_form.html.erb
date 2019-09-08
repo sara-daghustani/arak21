@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<%= current_user.first_name%>
     <div class="form-group font-weight-bold">
 
         <div class="col-md-5 mb-2 text-white"> 
@@ -19,10 +19,12 @@
         </div> 
 
         <div class="col-md-5 mb-2 text-white"> 
-          <%= form.label :user_id %> <br>
-          <%= form.text_field :user_id %>
+          <%= "Patient" %> <br>
+          <%= current_user.first_name + " " + current_user.last_name%>
         </div> 
 
+        
+        <%= form.hidden_field :user_id , :value => current_user.id%>
 
         <div class="col-md-9 mb-2 text-white">
           <%= form.label :appointment_on %> <br>
