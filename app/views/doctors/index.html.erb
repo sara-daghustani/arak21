@@ -6,9 +6,10 @@
 <div class="container">
         <h2 class="h3 block-title text-center">Arak Team </h2>
         <div class="text-right">
-            <% if current_user.admin == true%>
+            <% if current_user.try(:admin?)%>
              <%= link_to new_doctor_path do %>
                  <i class="fa fa-plus"> Add A Doctor </i>
+                 
                  <%end%>
             <%end%>
         </div>
@@ -37,10 +38,12 @@
                     <div class="backside">
                           <div class="card hovercard">
                             <div class="cardheader">
-                            <% if current_user.admin == true %>
+                            <% if current_user.try(:admin?) %>
                              <%= link_to "Delete", doctor_path(doctor), method: :delete, data: {confirm:"Are you sure you want to delete"}%>
                                  <%= link_to "Edit", edit_doctor_path(doctor)%>
-                                 <%= link_to 'Show', @doctor %> 
+                                 <%= link_to 'Show', doctor %> 
+                                
+
                                  <%end%>
                             </div>
                             <div class="avatar">
@@ -55,7 +58,8 @@
                             </div>
                             <hr>
                             <div class="bottom">
-                                <%= link_to "Appointment", new_appointment_path, class:"button" %> <br>    
+                                <%= link_to "Appointment", new_appointment_path, class:"button" %> <br>  
+                                <%=link_to "Doctor Appointments", doctorAppointments_path, class:"nav-link"%>  
                             </div> 
                               
                         </div>  
