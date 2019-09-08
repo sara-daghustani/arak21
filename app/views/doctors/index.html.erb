@@ -1,14 +1,15 @@
 <div class="card border-dark mb-3 mx-auto " style="width: 80rem;" >
 <div class="card-body">
-  <h5 class="card-title text-center"> فريقنا </h5>
+  <h5 class="card-title text-center"> فريق اراك  </h5>
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-        <h2 class="h3 block-title text-center">Arak Team </h2>
+      
         <div class="text-right">
             <% if current_user.admin == true%>
              <%= link_to new_doctor_path do %>
-                 <i class="fa fa-plus"> Add A Doctor </i>
+                 <i > إضافة دكتور </i >
+                 <i class="fa fa-plus"></i>
                  <%end%>
             <%end%>
         </div>
@@ -38,9 +39,9 @@
                           <div class="card hovercard">
                             <div class="cardheader">
                             <% if current_user.admin == true %>
-                             <%= link_to "Delete", doctor_path(doctor), method: :delete, data: {confirm:"Are you sure you want to delete"}%>
-                                 <%= link_to "Edit", edit_doctor_path(doctor)%>
-                                 <%= link_to 'Show', @doctor %> 
+                             <%= link_to "حذف", doctor_path(doctor), method: :delete, data: {confirm:"هل أنت متأكد من الحذف ؟"}%>&nbsp;
+                                 <%= link_to "تعديل", edit_doctor_path(doctor)%>&nbsp;
+                                 <%= link_to 'إظهار', @doctor %> &nbsp;
                                  <%end%>
                             </div>
                             <div class="avatar">
@@ -55,7 +56,7 @@
                             </div>
                             <hr>
                             <div class="bottom">
-                                <%= link_to "Appointment", new_appointment_path, class:"button" %> <br>    
+                                <%= link_to "موعد جديد ", new_appointment_path, class:"button" %> <br>    
                             </div> 
                               
                         </div>  

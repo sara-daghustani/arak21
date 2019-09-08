@@ -7,7 +7,7 @@
        
      <p class="d-flex justify-content-end">
      <%= link_to 'عرض', @appointment %> |
-     <%= link_to 'رجوع', appointments_path %>
+     <%= link_to 'رجوع', appointments_path %> <br>
             <%if user_signed_in?%>
             ! مرحباً  <%= current_user.first_name + " "+current_user.last_name%> 
             <%end%>
