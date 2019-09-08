@@ -1,13 +1,12 @@
 
- <div class="card border-dark mb-3 mx-auto text-right" style="width: 40rem;" >
-  <div class="card-body">
-    <h5 class="card-title text-center">ملفي</h5>
-    <h5 class="card-subtitle mb-2 text-muted  text-center">! اي نص او جمله هنا </h5>
-    <h6>الاسم الأول : <%= current_user.first_name %> </h6><br>
-    <h6> الآسم الأخير : <%= current_user.last_name %> </h6><br>
-    <h6> <%= current_user.email %>: البريد الإلكتروني </h6><br>
-    <h6> <%= current_user.phone %>: رقم الهاتف </h6><br>
-    <%= link_to 'تعديل', edit_user_registration_path,class:"card-link "%>
-  
-  </div>
+<div class="card border-dark mb-3 mx-auto text-right" style="width: 40rem;" >
+    <div class="card-body">
+      <h5 class="card-title text-center">ملفي</h5>
+      <h5 class="card-subtitle mb-2 text-muted  text-center">! اي نص او جمله هنا </h5>
+      <h6>الاسم الأول : <%= current_user.first_name %> </h6> <br/>
+      <h6> الآسم الأخير : <%= current_user.last_name %> </h6><br/>
+      <h6> <%= current_user.email %>: البريد الإلكتروني </h6><br/>
+      <h6> <%= current_user.phone %>: رقم الهاتف </h6><br/>
+        <%= link_to 'تعديل', edit_user_registration_path,class:"card-link "%>
+    </div>
 </div>
