@@ -19,9 +19,22 @@
 </p>
 
 <p>
-  <strong> المريض: </strong>
-  <%= current_user.first_name %>
+  <strong>  :المريض </strong>
+  <%= current_user.first_name+" "+ current_user.first_name%>
 </p>
+<p>
+<%if current_user.try(:admin?)%>
+
+<strong>Patient email: </strong>
+<%= @appointment.user.email%>
+</p>
+
+<p>
+<strong>Patient Phone: </strong>
+<%= @appointment.user.phone%>
+<%end%>
+</p>
+
 
 <%= link_to 'تعديل', edit_appointment_path(@appointment) %> |
 <%= link_to 'رجوع', appointments_path %>

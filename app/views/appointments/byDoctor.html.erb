@@ -42,16 +42,12 @@
     <td><%= link_to 'حذف', appointment, method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
     <td><%= appointment.appointment_on %></td>
     <td><%= appointment.doctor.speciality %></td>
-    <%if current_user.try(:admin?)%>
-    <td><%= link_to appointment.doctor.name, "/appointments/doctors/#{appointment.doctor.name}"%></td>
-    <%else%>
-    <td><%= appointment.doctor.name %></td>
-    <%end%>
+    <td><%= appointment.doctor.name%></td>
         <% if current_user.try(:admin?)%>
     <td><%= appointment.user.first_name%><td>
 
     <%end%>
-    <%end%>
+     <%end%>
 
     </tr>
   <% end %>
