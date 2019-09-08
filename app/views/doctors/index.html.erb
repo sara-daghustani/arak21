@@ -58,8 +58,13 @@
                             </div>
                             <hr>
                             <div class="bottom">
-                                <%= link_to "Appointment", new_appointment_path, class:"button" %> <br>  
+                                <%= link_to "Appointment", new_appointment_path, class:"button" %> <br>
+                                <%if user_signed_in?%> 
+                                <% if current_user.admin == true%> 
                                 <%=link_to "Doctor Appointments", doctorAppointments_path, class:"nav-link"%>  
+                                <%end%>
+                                <%end%>
+
                             </div> 
                               
                         </div>  
