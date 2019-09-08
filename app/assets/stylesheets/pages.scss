@@ -16,7 +16,6 @@
   height:83vh;
 }
 
-
   h1, h2, h3, h4, h5 {
      font-family: 'Montserrat', sans-serif;
   }
@@ -42,6 +41,7 @@
      background: #063d28;
      color: #fff;
   }
+
   .btn-transparent-white {
      border: 2px solid #fff;
      color: #fff;
@@ -204,15 +204,15 @@
      font-size: 22px;
      margin-bottom: 18px;
   }
-  .service-sec i {
-     border: 1px solid #79d3db;
-     border-radius: 2px;
-     font-size: 25px;
-     padding: 12px 0;
-     width: 52px;
-     color: #79d3db;
-     margin-bottom: 20px
-  }
+  .service-sec img {
+    border: 1px solid #79d3db;
+    border-radius: 2px;
+    font-size: 25px;
+    padding: 7px 7px;
+    width: 60px;
+    color: #79d3db;
+    margin-bottom: 20px;
+}
   .service-sec h3 {
      font-size: 23px;
      font-weight: 600;
