@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <title>AracApp</title>
     <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
     <link rel="icon" href="https://png.pngtree.com/svg/20160108/dentist_1285662.png"/>
@@ -12,45 +11,45 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
- <body>
-       
-  <%= render 'layouts/nav' %> 
-   <%= yield %> 
+  <body>
+      <%= render 'layouts/nav' %> 
+      <%= yield %> 
 
-]<hr>
-<footer class="site-footer" role="contentinfo">
-<div class="container text-right">
-  <div class="row">
-      <div class="col-md-2 mb-5">
-        <h5>ساعات العمل</h5>
-        <ul class="list-unstyled">
-          <li>من السبت حتى الخميس </li>
-          <li>من الساعة التاسعة صباحاً</li>
-          <li>حتى الساعة العاشرة مساءً</li>
-        </ul>
-      </div>
-      <div class="col-md-3 mb-5">
-        <h5>للحجز والمواعيد</h5>
-        <ul class="list-unstyled">
-          <li>هاتف: ٠١٢٥٤٣٩٩٩٩</li>
-          <li>جوال: ٠٥٥٦٦٥٢٣٤٩</li>
-        </ul>
-    </div>
-     <div class="col-md-5 mb-0">
-     <h5>موقع العيادة</h5>
-     <ul class="list-unstyled">
-        <li> مكة المكرمة – العوالي - شارع إبراهيم الجفالي -  بجوار بن داوود  </li>
-      </ul>
-      </div>
-  </div>
-  <div class="row">
-    <div class="col-12 text-md-center text-left">
-       <p>
-       Copyright &copy; 2019 All rights
-      </p>
-    </div>
-  </div>
-</div>
-</footer>
+      <hr/>
+
+      <footer class="site-footer">
+            <div class="container text-right">
+              <div class="row">
+                    <div class="col-md-2 mb-5">
+                      <h5>ساعات العمل</h5>
+                      <ul class="list-unstyled">
+                        <li>من السبت حتى الخميس </li>
+                        <li>من الساعة التاسعة صباحاً</li>
+                        <li>حتى الساعة العاشرة مساءً</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-3 mb-5">
+                      <h5>للحجز والمواعيد</h5>
+                      <ul class="list-unstyled">
+                        <li>هاتف: ٠١٢٥٤٣٩٩٩٩</li>
+                        <li>جوال: ٠٥٥٦٦٥٢٣٤٩</li>
+                      </ul>
+                    </div>
+                  <div class="col-md-5 mb-0">
+                    <h5>موقع العيادة</h5>
+                    <ul class="list-unstyled">
+                      <li> مكة المكرمة – العوالي - شارع إبراهيم الجفالي -  بجوار بن داوود  </li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-12 text-md-center text-left">
+                  <p>
+                    Copyright &copy; 2019 All rights
+                  </p>
+                </div>
+              </div>
+            </div>
+      </footer>
   </body> 
 </html>
