@@ -21,11 +21,14 @@
           <label for="doctor_name">  :  الدكتور  </label><br>
 
           <%= "Patient" %> <br>
+         <% if user_signed_in?%>
           <%= current_user.first_name + " " + current_user.last_name%>
+       
         </div> 
 
         
         <%= form.hidden_field :user_id , :value => current_user.id%>
+        <%end%>
 
         <%= form.datetime_select :appointment_on %>
         <label for="user_id">  :  الموعد في   </label><br><br>
