@@ -1,25 +1,27 @@
+<div class="card border-dark mb-3 mx-auto " style="width: 60rem;" >
+<div class="card-body">
+  <h5 class="card-title text-center">موعد جديد </h5>
 
-
-
-<div class="container">  
-   <div class="text-black jumbotron my-4 text-white">
-   <%= link_to 'Back', appointments_path %>
-     <p class="d-flex justify-content-end">
-            <%if user_signed_in?%>
-            Welcome <%= current_user.email%>
-            <%end%>
-      </p>
-      
-      <div class="row align-items-center">
+  
+  <p class="d-flex justify-content-between">
+     <%= link_to 'رجوع', appointments_path %>
+     <%if user_signed_in?%>
+     ! مرحباً  <%= current_user.first_name + " "+current_user.last_name%> 
+        <%end%>
+        </p>
+       <h1 class="display-5">إنشاء موعد </h1>
+      <div class="row text-right">
          <div class="col-lg-5">
-            <h1 class="display-5">Make Appointment</h1>
+           
             <p><%= render 'form', appointment: @appointment %></p>
          </div>
          <div class="col-lg-7">
-            <h1 class=" display-3"> Make Appointment</h1>
-            <%=image_tag("",class:"img-fluid rounded" )%>
+          
+            <%=image_tag("",class:"img-fluid rounded " )%>
          </div>
       </div>
-   </div>
-</div>
+ </div>
+ </div>
+ </div>
+ </div>
 
