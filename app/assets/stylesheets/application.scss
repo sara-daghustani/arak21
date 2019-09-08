@@ -35,44 +35,29 @@ body {
 
 }
 
-.topnav-right {
-  float: right;
-}
 footer{
   clear: both;
 
 }
 
-.fa-twitter, .fa-facebook, .fa-linkedin, .fa-instagram{
+.fa-twitter, .fa-snapchat, .fa-whatsapp, .fa-instagram{
 color: #78D3DB;
 }
-
+.navbar{
+  background-color: #e9ecefcf;
+}
 .navbar.top-bar {
   border-radius: 0;
-  padding: 16px 0;
+  width: 100%;
   z-index: 16;
+  position: fixed;
+  top:0;
 }
 .navbar-toggler {
   border: 1px solid #fff;
   color: #fff;
   position: absolute;
   right: 21px;
-}
-.sps {
-  padding: 1em .5em;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: all 0.25s ease;
-  width: 100%;
-}
-.sps--abv {
-  background-color: transparent;
-  color: #000;
-}
-.sps--blw {
-  background-color: #fff;
-  color: #fff;
 }
 .top-bar a.navbar-brand {
   color: #fff;
@@ -81,7 +66,7 @@ color: #78D3DB;
   padding: 5px 0 0 10px;
   text-transform: uppercase;
 }
-.sps--blw.top-bar a.navbar-brand {
+.top-bar a.navbar-brand {
   color: #000;
 }
 .top-bar a.navbar-brand span {
@@ -91,22 +76,14 @@ color: #78D3DB;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-  padding: 12px 18px!important;
+  padding: 12px 15px!important;
  
 }
-.sps--blw.top-bar .nav-link {
-  color: #000
-}
+
 .top-bar .navbar-nav .nav-item {
   margin: 0
 }
 .top-bar .nav-link:hover, .top-bar .nav-item.active a {
   color: #fff;
   border-bottom: 2px solid #79d3db;
-  border-radius: 0;
-}
-.sps--blw.top-bar .nav-link:hover, .sps--blw.top-bar .nav-item.active a {
-  color: #79d3db;
-  border-bottom: none;
-  border-radius: 0;
 }
