@@ -7,4 +7,5 @@ class Doctor
   field :img, type: String
   has_many :appointments
   has_and_belongs_to_many :users
+  validates :name, :speciality, :description, :img,presence: true
 end
