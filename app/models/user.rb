@@ -43,6 +43,6 @@ validates_length_of :phone, is: 10
   # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
-  has_many :appointments
+  has_many :appointments, dependent: :destroy
   has_and_belongs_to_many :doctors
 end
