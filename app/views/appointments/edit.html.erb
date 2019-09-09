@@ -1,28 +1,31 @@
+<section class="service-sec mt-5">
+  <div class="text-center mx-auto">
+   <div class="card border-light mb-3 mx-auto text-right" style="width: 60rem;" >
+   <div class="card-body">
+   <h5 class="card-title text-center">تعديل الموعد   </h5>
 
-<div class="card border-light mb-3 mx-auto text-right" style="width: 60rem;" >
-<div class="card-body">
-  <h5 class="card-title text-center">تعديل الموعد   </h5>
 
-
-       
-     <p class="d-flex justify-content-end">
-     <%= link_to 'عرض', @appointment %> |
-     <%= link_to 'رجوع', appointments_path %> <br>
-            <%if user_signed_in?%>
-            ! مرحباً  <%= current_user.first_name + " "+current_user.last_name%> 
-            <%end%>
-      </p>
-      
-      <div class="row align-items-right">
-         <div class="col-lg-5">
-            <h1 class="display-5">Edit Appointment</h1>
-            <p><%= render 'form', appointment: @appointment %></p>
-         </div>
          
+      <p class="d-flex justify-content-end">
+      <%= link_to 'عرض', @appointment %> |
+      <%= link_to 'رجوع', appointments_path %> <br>
+               <%if user_signed_in?%>
+               ! مرحباً  <%= current_user.first_name + " "+current_user.last_name%> 
+               <%end%>
+         </p>
+         
+         <div class="row align-items-right">
+            <div class="col-lg-5">
+               <h1 class="display-5">Edit Appointment</h1>
+               <p><%= render 'form', appointment: @appointment %></p>
+            </div>
+            
+         </div>
       </div>
    </div>
-</div>
 
-</div>
-</div>
+   </div>
+   </div>
+   </div>
+</section>
 
