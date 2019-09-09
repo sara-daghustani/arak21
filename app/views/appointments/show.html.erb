@@ -17,7 +17,7 @@
         <%= @appointment.doctor.name%>
         <strong>  الدكتور  </strong>
       </p>
-
+      <%if user_signed_in?%>
       <p>
         <strong> المريض </strong>
         <%= current_user.first_name+" "+ current_user.first_name%>
@@ -34,6 +34,7 @@
       <%= @appointment.user.phone%>
       <%end%>
       </p>
+      <%end%>
 
 
       <%= link_to 'تعديل', edit_appointment_path(@appointment) %> |
