@@ -3,7 +3,13 @@
   <p>مجمع آراك الرقمي لطب الأسنان </p>
         <div class="card bborder-light mb-3 mx-auto text-right" style="width: 50rem;" >
         <div class="card-body">
-          <h5 class="card-title text-center"> دكتور جديد    </h5>
+                      <div class="row mb-5">
+                         <div class="col text-left">
+                          <%= link_to 'تعديل', edit_doctor_path(@doctor), class:"profile-edit-btn"  %> |
+                           <%= link_to 'رجوع', doctors_path, class:"profile-edit-btn"  %>
+                          </div>
+                             <h5 class="card-title text-center text-color"> إنشاء موعد </h5>
+                      </div>
         <p id="notice"><%= notice %></p>
 
         <p>
@@ -26,8 +32,7 @@
         <strong>:  الصوره </strong>
         </p>
         <br>
-        <%= link_to 'تعديل', edit_doctor_path(@doctor) %> |
-        <%= link_to 'رجوع', doctors_path %>
+       
         </div>
         </div>
     </div>
