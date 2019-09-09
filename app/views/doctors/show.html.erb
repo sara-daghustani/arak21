@@ -12,32 +12,16 @@
                              <h5 class="card-title text-center text-color"> تم اضافة الدكتور بنجاح </h5>
                       </div>
 
-            <div class="row">
-                                <div class="col-md-6">
-                                                <h6 class="mb-4"><%= @appointment.appointment_on %></h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label>:الموعد</label>
-                                            </div>
-                                            
-                                        </div>
                                         <div class="row">
                                         <div class="col-md-6">
-                                                <h6 class="mb-4"><%=@appointment.doctor.name%></h6>
+                                                <h6 class="mb-4"><%=@doctor.name%></h6>
                                             </div>
                                             <div class="col-md-6">
                                                 <label>:اسم الدكتور</label>
                                             </div>
                                         </div>
                                         <%if user_signed_in?%>
-                                        <div class="row">
-                                         <div class="col-md-6">
-                                                <h6 class="mb-4"> <%= @doctor.name %> </h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label> :اسم الدكتور</label>
-                                            </div>
-                                        </div>
+                                       
                                         <div class="row">
                                          <div class="col-md-6">
                                                 <h6 class="mb-4">  <%= @doctor.speciality %> </h6>
@@ -57,7 +41,7 @@
                                         </div>
                                         <div class="row">
                                          <div class="col-md-6">
-                                                <h6 class="mb-4"> <%= image_tag(@doctor.img, size: "250x250", alt: "Doctor Image") %> </h6>
+                                                <h6 class="mb-4"> <%= image_tag(@doctor.img, alt: "Doctor Image") %> </h6>
                                             </div>
                                             <div class="col-md-6">
                                                 <label> :صورة الدكتور</label>
