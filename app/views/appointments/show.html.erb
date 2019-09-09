@@ -21,12 +21,12 @@
       <p>
       <%if current_user.try(:admin?)%>
 
-      <strong>Patient email: </strong>
+      <strong>البريد الالكتروني للمريض </strong>
       <%= @appointment.user.email%>
       </p>
 
       <p>
-      <strong>Patient Phone: </strong>
+      <strong> رقم المريض:</strong>
       <%= @appointment.user.phone%>
       <%end%>
       </p>
