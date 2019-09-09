@@ -4,13 +4,15 @@
         <p>مجمع آراك الرقمي لطب الأسنان </p>           
                 <div class="card border-ligh mb-3 mx-auto text-right" style="width: 60rem;" >
                         <div class="card-body">
-                                <h5 class="card-title text-center">دكتور جديد </h5>
-                                <p class="d-flex justify-content-between">
-                                <%= link_to 'رجوع', doctors_path %>
-                                <%if user_signed_in?%>
-                                <%= current_user.first_name %>  <%=current_user.last_name%> 
-                                <%end%></p>
-                                <h1 class="display-5">إضافة دكتور</h1>
+
+                        <div class="row mb-5">
+                                    <div class="col text-left">
+                                       <%= link_to 'رجوع', doctors_path, class:"profile-edit-btn" %>
+                                    </div>
+                                  
+                                    <h5 class="card-title text-color"> أضف دكتور جديد</h5>
+                                 </div>
+                                
                                 <p><%= render 'form', doctor: @doctor %></p>
                         </div>
                 </div>

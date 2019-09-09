@@ -6,5 +6,4 @@ class Appointment
   field :user_id, type: String
   belongs_to :doctor
   belongs_to :user
-  validates :appointment_on, presence: true
 end
