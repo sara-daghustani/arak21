@@ -4,58 +4,57 @@
 
 <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
           <%= image_tag("image3.jpeg", class:" d-block img-d", alt:"First slide") %>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>...</h5>
-              <p>...</p>
+            <div class="carousel-caption d-content d-md-block">
+              <h5>الرعاية في بيئة من التميز</h5>
             </div>
         </div>
         <div class="carousel-item">
           <%= image_tag("image1.jpeg",  class:"d-block img-d", alt:"Second slide") %>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>...</h5>
-              <p>...</p>
+            <div class="carousel-caption d-content d-md-block">
+              <h5>نخلق ابتسامة صحية تريدها بلمسة لطيفة</h5>
+    
             </div>
         </div>
          <div class="carousel-item">
           <%= image_tag("image4.jpeg", class:"d-block img-d", alt:"Third slide") %>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>...</h5>
-              <p>...</p>
+            <div class="carousel-caption d-content d-md-block">
+              <h5>نلبي جميع احتياجات ورغبات الأسنان الخاصة بك </h5>
             </div>
         </div>
          <div class="carousel-item">
           <%= image_tag("image5.jpeg", class:"d-block img-d", alt:"Third slide") %>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>...</h5>
-              <p>...</p>
+            <div class="carousel-caption d-content d-md-block">
+              <h5>خدمة استثنائية ولطيفه بشكل ملحوظ</h5>
             </div>
         </div>
          <div class="carousel-item">
           <%= image_tag("image6.jpeg", class:"d-block img-d", alt:"Third slide") %>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>...</h5>
-              <p>...</p>
+            <div class="carousel-caption d-content d-md-block">
+              <h5>للحصول على ابتسامة جميلة وصحية</h5>
             </div>
         </div>
         <div class="carousel-item">
           <%= image_tag("image7.jpeg", class:"d-block img-d", alt:"Third slide") %>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>...</h5>
-              <p>...</p>
+            <div class="carousel-caption d-content d-md-block">
+              <h5>نقدم أعلى جودة للأسنان بأسعار معقولة</h5>
             </div>
         </div>
         <div class="carousel-item">
           <%= image_tag("image8.jpeg", class:"d-block img-d", alt:"Third slide") %>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>...</h5>
-              <p>...</p>
+            <div class="carousel-caption d-content d-md-block">
+              <h5>طريقك إلى ابتسامة جديدة مشرقة</h5>
             </div>
         </div>
     </div>
@@ -69,7 +68,7 @@
         <div class="row">
           <div class="col-md-12">
               <div class="heading mb-0">
-                <h2><small>any title here</small>also any small pargarph here </h2>
+                <h2><small>عائلة آراك الطبي </small>نمنحك سببًا للاحتفاظ بالابتسامه والشعور بالثقة حيال ذلك </h2>
               </div>
           </div>
           <div class="col-md-8">
@@ -104,7 +103,11 @@
 <section class="about-sec parallax-section mb-5 text-right" id="about">
   <div class="container">
     <div class="row">
- 
+     <div class="col-md-4 mt-5">
+        <p>  ممارستنا متمحورة حولك وكل جانب من جوانب صحة فمك من اللحظة التي تدخل فيها إلى منشأتنا ، نريدك أن تشعر أنك في بيتك ، وأن تكون آمنًا بين يدي طاقم مؤهل </p>
+        <p>نعتقد أن المرضى يستحقون أعلى مستوى من العناية بالأسنان</p>
+        <%= link_to "المزيد", aboutus_path, class: "links"%> 
+      </div>
       <div class="col-md-4 mt-5">
         <p>احدث مجمع طبي متخصص بطب الاسنان و مجهز بأحدث التقنيات الطبية الالمانية باشراف نخبة من اطباء واستشاريين سعوديين</p>
         <p> نتميز بأحدث الأنظمة والتقنيات الطبية التشخيصية والعلاجية ويفخر المجمع بانضمام نخبة من الاستشاريين  رواد طب الأسنان في جميع التخصصات في مكان واحد  </p>

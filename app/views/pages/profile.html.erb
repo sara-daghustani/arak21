@@ -1,12 +1,82 @@
+<section class="service-sec mt-5">
+  <div class="card text-center mx-auto border-light"  style="max-width: 72rem;">
+   
+<div class="container emp-profile">
+                <div class="row">
+                    <div class="col-md-2 text-right">
+                         <%= link_to 'تعديل معلوماتي', edit_user_registration_path, class:"profile-edit-btn"%>
+                        
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="profile-head">
+                                    <h5>
+                                    <%= current_user.first_name %> <%= current_user.last_name %>
+                                    </h5>
+                                    <h6 class="mt-2">
+                                       احد اعضاء عائلة أراك
+                                    </h6>
+                                 
+                          
+                                <div class="nav-item mt-5">
+                                   معلوماتي
+                                <hr/>
+                                </div>
+                          
+                        </div>  
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                        </div>
+                    </div> 
+                    
+                </div>
 
-<div class="card border-light mb-3 mx-auto text-right" style="width: 40rem;" >
-    <div class="card-body">
-      <h5 class="card-title text-center">ملفي</h5>
-      <h5 class="card-subtitle mb-2 text-muted  text-center">! اي نص او جمله هنا </h5>
-      <h6>الاسم الأول : <%= current_user.first_name %> </h6> <br/>
-      <h6> الآسم الأخير : <%= current_user.last_name %> </h6><br/>
-      <h6> <%= current_user.email %>: البريد الإلكتروني </h6><br/>
-      <h6> <%= current_user.phone %>: رقم الهاتف </h6><br/>
-        <%= link_to 'تعديل', edit_user_registration_path,class:"card-link "%>
-    </div>
-</div>
+              <div class="row text-right">
+                       <div class="col-md-8">
+                          <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">    
+                              <div class="row">
+                                <div class="col-md-6">
+                                                <p><%= current_user.first_name %> <%= current_user.last_name %></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>:الاسم</label>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                                <p><%= current_user.email %></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>:البريد الإلكتروني</label>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                         <div class="col-md-6">
+                                                <p><%= current_user.phone %></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label> :رقم الجوال</label>
+                                            </div>
+                                        </div>
+                              </div>
+                                   
+                        </div>
+                    </div>
+                     <div class="col-md-4">
+                                        <div class="profile-work">
+                                             <label> روابط سريعة </label><br/>
+                                              <%= link_to  "دفتر المواعيد", class:"profile-edit-btn"%><br/> 
+                                              <%= link_to 'انشاء موعد', class:"profile-edit-btn"%><br/> 
+                                        </div>
+                                    </div>   
+                </div>  
+                     
+     
+        </div>
+        </div>
+</section>
