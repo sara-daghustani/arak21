@@ -42,12 +42,17 @@ def byDoctor
   # POST /appointments.json
   def create
     # (params[:appointment])
+    
     @appointment = Appointment.new(appointment_params)
+    if !params[:appointment]["appointment_on(1i)"] == "اختر السنه"
     @appointment.appointment_on =  DateTime.new( 
     params[:appointment]["appointment_on(1i)"].to_i,
     params[:appointment]["appointment_on(2i)"].to_i,
     params[:appointment]["appointment_on(3i)"].to_i,
     params[:appointment]["appointment_on(4i)"].to_i)
+    else
+      @appointment.appointment_on =  DateTime.current( )
+    end
    
     # params[:appointment]["appointment_on(5i)"].to_i
     # @appointment.appointment_on = params[:appointment]
@@ -65,6 +70,7 @@ def byDoctor
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
       end
     end
+  
   end
 
   # PATCH/PUT /appointments/1
