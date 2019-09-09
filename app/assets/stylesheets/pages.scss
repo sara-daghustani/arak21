@@ -71,10 +71,10 @@ right: 5%;
      margin-bottom: 18px;
   }
   .service-sec img {
-    border: 1px solid #79d3db;
-    border-radius: 2px;
+    border: 1px solid #79d3dbbb;
+    border-radius: 1px;
     font-size: 25px;
-    padding: 7px 7px;
+    padding: 1px 7px;
     width: 60px;
     color: #79d3db;
     margin-bottom: 20px;
@@ -190,8 +190,8 @@ display: inline-block;
   text-align: center;
 }
 .profile-img img{
-  width: 70%;
-  height: 100%;
+  width: 200px ;
+  height: 180px;
 }
 .profile-img .file {
   position: relative;
