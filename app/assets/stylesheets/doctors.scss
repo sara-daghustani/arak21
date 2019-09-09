@@ -37,30 +37,30 @@
     padding-top: 0;
     overflow: hidden;
     text-align: center;
-    background-color: rgba(214, 224, 226, 0.2);
+    background-color:white;
 }
 
 .card.hovercard .cardheader {
-    background-color: beige;
+    background-color: #79d3db2e;
     background-size: cover;
-    height: 135px;
+    height: 80px;
 }
 
 .card.hovercard .avatar {
     position: relative;
     top: -50px;
-    margin-bottom: -50px;
+    margin-bottom: -20px;
 }
 
 .card.hovercard .avatar img {
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
-    max-height: 100px;
+    width: 105px;
+    height: 105px;
+    max-width: 160px;
+    max-height: 160px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.5);
+    border: 4px solid rgba(255, 255, 255, 0.529);
 }
 
 .card.hovercard .info {
