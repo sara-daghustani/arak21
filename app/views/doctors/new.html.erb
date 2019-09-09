@@ -1,21 +1,18 @@
 
-<div class="card border-light mb-3 mx-auto text-right" style="width: 40rem;" >
-<div class="card-body">
-  <h5 class="card-title text-center"> دكتور جديد    </h5>
-<div class="container">  
-
-  <%= link_to 'رجوع ', doctors_path %>
-     <p class="d-flex justify-content-end">
-            <%if user_signed_in?%>
-            ! مرحباً  <%= current_user.first_name%> 
-            <%end%>
-      </p>
-      
-    
-            <h2 class="display-5">إضافه دكتور  </h2>
-            <p><%= render 'form', doctor: @doctor %></p>
-         
-   
-</div>
-</div>
-</div>
+<section class="service-sec mt-5">
+        <div class="text-center mx-auto mt-5">
+                <p>مجمع آراك الرقمي الطبي المتخصص في طب الأسنان </p>             
+                <div class="card border-ligh mb-3 mx-auto text-right" style="width: 60rem;" >
+                        <div class="card-body">
+                                <h5 class="card-title text-center">دكتور جديد </h5>
+                                <p class="d-flex justify-content-between">
+                                <%= link_to 'رجوع', doctors_path %>
+                                <%if user_signed_in?%>
+                                <%= current_user.first_name %>  <%=current_user.last_name%> 
+                                <%end%></p>
+                                <h1 class="display-5">إضافة دكتور</h1>
+                                <p><%= render 'form', doctor: @doctor %></p>
+                        </div>
+                </div>
+        </div>
+</section>
