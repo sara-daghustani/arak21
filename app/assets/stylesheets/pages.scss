@@ -4,8 +4,28 @@
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 @import url(http://fonts.googleapis.com/earlyaccess/lateef.css); 
 
-row{
+.row{
   justify-content: center;
+}
+.profile-work a {
+  color: #75767A;
+}
+.profile-work a:hover{
+  color: #75767A;
+  border-bottom: 2px solid #79d3db;
+  border-radius: 0;
+  text-decoration: none;
+}
+.profile-edit-btn{
+  color: #75767A;
+ 
+}
+
+.profile-edit-btn:hover{
+  color: #75767A;
+  border-bottom: 2px solid #79d3db;
+  border-radius: 0;
+  text-decoration: none;
 }
 
 .img-d{
