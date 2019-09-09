@@ -1,22 +1,33 @@
-<p id="notice"><%= notice %></p>
+<section class="service-sec mt-5">
+  <div class="text-center mx-auto">
+    <div class="card bborder-light mb-3 mx-auto text-right" style="width: 50rem;" >
+    <div class="card-body">
+      <h5 class="card-title text-center"> دكتور جديد    </h5>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @doctor.name %>
-</p>
+    <p>
+    <strong> الاسم : </strong>
+    <%= @doctor.name %>
+    
+    
+    </p>
 
-<p>
-  <strong>Speciality:</strong>
-  <%= @doctor.speciality %>
-</p>
-<p>
-  <strong>description:</strong>
-  <%= @doctor.description %>
-</p>
-<p>
-  <strong> img url:</strong>
-  <%= image_tag(@doctor.img, size: "150x150", alt: "Doctor Image") %>
-</p>
-
-<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
-<%= link_to 'Back', doctors_path %>
+    <p>
+      <strong>التخصص : </strong>
+      <%= @doctor.speciality %>
+    </p>
+    <p>
+      <strong>الوصف : </strong>
+      <%= @doctor.description %>
+    </p>
+    <p>
+    <%= image_tag(@doctor.img, size: "150x150", alt: "Doctor Image") %>
+    <strong>:  الصوره </strong>
+    </p>
+    <br>
+    <%= link_to 'تعديل', edit_doctor_path(@doctor) %> |
+    <%= link_to 'رجوع', doctors_path %>
+    </div>
+    </div>
+    </div>
+</section>

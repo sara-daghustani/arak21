@@ -1,78 +1,75 @@
-<div class="card border-dark mb-3 mx-auto " style="width: 80rem;" >
-<div class="card-body">
-  <h5 class="card-title text-center"> فريقنا </h5>
 <p id="notice"><%= notice %></p>
 
-<div class="container">
-        <h2 class="h3 block-title text-center">Arak Team </h2>
-        <div class="text-right">
-            <% if current_user.try(:admin?)%>
-             <%= link_to new_doctor_path do %>
-                 <i class="fa fa-plus"> Add A Doctor </i>
-                 
-                 <%end%>
-            <%end%>
-        </div>
+<section class="service-sec mt-5">
+    <div class="mt-5 text-center mx-auto ">
+      <p>مجمع آراك الرقمي الطبي المتخصص في طب الأسنان </p>
+        <div class="card border-light mb-3 mx-auto " style="width: 80rem;" >
+            <div class="card-body">
+                <h5 class="card-title text-center"> فريق اراك  </h5>
+                
+                <div class="container">
+                        <div class="text-right">
+                            <% if current_user.try(:admin?)%>
+                            <%= link_to new_doctor_path do %>
+                                <i > إضافة دكتور </i >
+                                <i class="fa fa-plus"></i>
+                                <%end%>
+                            <%end%>
+                        </div>
+                    <div class="row">
+                    <% @doctors.each do |doctor| %>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="image-flip">
+                                <div class="mainflip">
+                                    <div class="frontside">
+                                        <div class="card hovercard">
+                                            <div class="cardheader">
+                                            </div>
+                                            <div class="avatar">
+                                                <%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image") %>
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">
+                                                    <h2><%= doctor.name %></h2>
+                                                </div>
+                                                <div class="desc"><%= doctor.speciality %></div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-    <div class="row">
-     <% @doctors.each do |doctor| %>
-        <div class="col-lg-3 col-sm-6">
-            <div class="image-flip">
-                <div class="mainflip">
-                    <div class="frontside">
-                        <div class="card hovercard">
-                            <div class="cardheader">
-                            </div>
-                            <div class="avatar">
-                                <%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image") %>
-                            </div>
-                            <div class="info">
-                                <div class="title">
-                                    <h2><%= doctor.name %></h2>
+                                    <div class="backside">
+                                        <div class="card hovercard">
+                                            <div class="cardheader">
+                                            <% if current_user.admin == true %>
+                                            <%= link_to "حذف", doctor_path(doctor), method: :delete, data: {confirm:"هل أنت متأكد من الحذف ؟"}%>&nbsp;
+                                                <%= link_to "تعديل", edit_doctor_path(doctor)%>&nbsp;
+                                                <%= link_to 'إظهار', @doctor %> &nbsp;
+                                                <%end%>
+                                            </div>
+                                            <div class="avatar">
+                                                <%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image") %>
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">
+                                                    <h5><%= doctor.name %></h5>
+                                                </div>
+                                                <div class="desc"><%= doctor.description %></div>
+                                            
+                                            </div>
+                                            <hr>
+                                            <div class="bottom">
+                                                <%= link_to "موعد جديد ", new_appointment_path, class:"button" %> <br>    
+                                            </div> 
+                                        </div>  
+                                    </div>
                                 </div>
-                                <div class="desc"><%= doctor.speciality %></div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="backside">
-                          <div class="card hovercard">
-                            <div class="cardheader">
-                            <% if current_user.try(:admin?) %>
-                             <%= link_to "Delete", doctor_path(doctor), method: :delete, data: {confirm:"Are you sure you want to delete"}%>
-                                 <%= link_to "Edit", edit_doctor_path(doctor)%>
-                                 <%= link_to 'Show', doctor %> 
-                                
-
-                                 <%end%>
-                            </div>
-                            <div class="avatar">
-                                <%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image") %>
-                            </div>
-                            <div class="info">
-                                <div class="title">
-                                    <h5><%= doctor.name %></h5>
-                                </div>
-                                <div class="desc"><%= doctor.description %></div>
-                               
-                            </div>
-                            <hr>
-                            <div class="bottom">
-                                <%= link_to "Appointment", new_appointment_path, class:"button" %> <br>
-                                
-
-                            </div> 
-                              
-                        </div>  
+                        <%end%>
                     </div>
                 </div>
             </div>
-        </div>
-        <%end%>
     </div>
-</div>
-
-    </div>
-    </div>                
+</div>                
 
 

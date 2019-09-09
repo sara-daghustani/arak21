@@ -1,25 +1,24 @@
- 
-<div class="container">  
-   <div class="text-black jumbotron my-4 text-white">
-        <%= link_to 'Show', @doctor %> |
-        <%= link_to 'Back', doctors_path %>
-     <p class="d-flex justify-content-end">
-            <%if user_signed_in?%>
-            Welcome <%= current_user.email%>
-            <%end%>
-      </p>
-      
-      <div class="row align-items-center">
-         <div class="col-lg-5">
-            <h1 class="display-5">Edit Appointment</h1>
-            <p><%= render 'form', doctor: @doctor %></p>
-         </div>
-         <div class="col-lg-7">
-            <h1 class=" display-3"> Make Appointment</h1>
-            <%=image_tag("",class:"img-fluid rounded" )%>
-         </div>
+<section class="service-sec mt-5">
+  <div class="text-center mx-auto">  
+            <div class="card border-light mb-3 mx-auto text-right" style="width: 60rem;" >
+            <div class="card-body">
+            <h5 class="card-title text-center">موعد جديد </h5>
+
+            <p class="d-flex justify-content-between">
+            <%= link_to 'إظهار', @doctor %> <%= link_to 'رجوع', doctors_path %>
+            
+                        <%if user_signed_in?%>
+                        ! مرحباً  <%= current_user.first_name + " "+current_user.last_name%> 
+                        <%end%>
+                  </p>
+                  
+                  
+                        <h1 class="display-5">تعديل</h1>
+                        <p><%= render 'form', doctor: @doctor %></p>
+                  </div>
+            
+            </div>
+            </div>
+            </div>
       </div>
-   </div>
-</div>
-</div>
-</div>
+</section>

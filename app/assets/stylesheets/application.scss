@@ -35,10 +35,56 @@ body {
 
 }
 
-.topnav-right {
-  float: right;
-}
 footer{
   clear: both;
 
+}
+
+.fa-twitter, .fa-snapchat, .fa-whatsapp, .fa-instagram{
+color: #78D3DB;
+}
+.navbar{
+  background-color: #e9ecefcf;
+}
+.navbar.top-bar {
+  border-radius: 0;
+  width: 100%;
+  z-index: 16;
+  position: fixed;
+  top:0;
+  clear:both;
+}
+.navbar-toggler {
+  border: 1px solid #fff;
+  color: #fff;
+  position: absolute;
+  right: 21px;
+}
+.top-bar a.navbar-brand {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 800;
+  padding: 5px 0 0 10px;
+  text-transform: uppercase;
+}
+.top-bar a.navbar-brand {
+  color: #000;
+}
+.top-bar a.navbar-brand span {
+  color: #79d3db;
+}
+.top-bar .nav-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 15px!important;
+ 
+}
+
+.top-bar .navbar-nav .nav-item {
+  margin: 0
+}
+.top-bar .nav-link:hover, .top-bar .nav-item.active a {
+  color: #fff;
+  border-bottom: 2px solid #79d3db;
 }

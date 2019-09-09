@@ -1,71 +1,69 @@
-<div class="card border-dark mb-3 mx-auto" style="width: 65rem;" >
-<div class="card-body">
-  <h5 class="card-title text-center">مواعيدي</h5> 
-<p id="notice"><%= notice %></p>
+<section class="service-sec mt-5">
+  <div class="mt-5 text-center mx-auto ">
+      <p>مجمع آراك الرقمي الطبي المتخصص في طب الأسنان </p>
+          <div class="card mb-3 mx-auto" style="width: 65rem;" >
+          <div class="card-body">
+            <h5 class="card-title text-center">المواعيد </h5> 
+          <p id="notice"><%= notice %></p>
 
-<div class="container">  
+          <div class="container">  
 
-    <p class="d-flex justify-content-between">
-    <%= link_to 'موعد جديد', new_appointment_path,  class:"btn btn-light" %>
+              <p class="d-flex justify-content-between">
+              <%= link_to 'موعد جديد', new_appointment_path,  class:"btn btn-light" %>
 
-    
-    <%if user_signed_in?%>
- ! مرحباً  <%= current_user.first_name%> 
-    <%end%>
+              
+              <%if user_signed_in?%>
+          ! مرحباً  <%= current_user.first_name%> 
+              <%end%>
 
-    </p>  
-  
-     
-         
-<table class="table  text-center" style="width: 60rem;">
-<thead>
-  <tr>
-  <th colspan="3"></th>
-    
-    <th scope="col">التاريخ</th>
-    <th scope="col">التخصص</th>
-    <th scope="col">الدكتور</th>
-       <%if user_signed_in?%> 
-    <%if current_user.try(:admin?)%>
-    <th scope="col">المريض</th>
-    <%end%>
+              </p>  
+            
+              
+                  
+          <table class="table  text-center" style="width: 60rem;">
+          <thead>
+            <tr>
+            <th colspan="3"></th>
+              
+              <th scope="col">التاريخ</th>
+              <th scope="col">التخصص</th>
+              <th scope="col">الدكتور</th>
+                <%if user_signed_in?%> 
+              <%if current_user.try(:admin?)%>
+              <th scope="col">المريض</th>
+              <%end%>
 
-    
-  </tr>
-</thead
-<tbody>
-  <% @appointments.each do |appointment| %>
-    <tr scope="row" >
-    <td><%= link_to 'إظهار', appointment %></td>
-    <td><%= link_to 'تعديل', edit_appointment_path(appointment) %></td>
-    
-    <td><%= link_to 'حذف', appointment, method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
-    <td><%= appointment.appointment_on %></td>
-    <td><%= appointment.doctor.speciality %></td>
-    <%if current_user.try(:admin?)%>
-    <td><%= link_to appointment.doctor.name, "/appointments/doctors/#{appointment.doctor.name}"%></td>
-    <%else%>
-    <td><%= appointment.doctor.name %></td>
-    <%end%>
-        <% if current_user.try(:admin?)%>
-    <td><%= appointment.user.first_name%><td>
+              
+            </tr>
+          </thead
+          <tbody>
+            <% @appointments.each do |appointment| %>
+              <tr scope="row" >
+              <td><%= link_to 'إظهار', appointment %></td>
+              <td><%= link_to 'تعديل', edit_appointment_path(appointment) %></td>
+              
+              <td><%= link_to 'حذف', appointment, method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
+              <td><%= appointment.appointment_on %></td>
+              <td><%= appointment.doctor.speciality %></td>
+              <%if current_user.try(:admin?)%>
+              <td><%= link_to appointment.doctor.name, "/appointments/doctors/#{appointment.doctor.name}"%></td>
+              <%else%>
+              <td><%= appointment.doctor.name %></td>
+              <%end%>
+                  <% if current_user.try(:admin?)%>
+              <td><%= appointment.user.first_name%><td>
 
-    <%end%>
-    <%end%>
+              <%end%>
+              <%end%>
 
-    </tr>
-  <% end %>
-</tbody>
-</table>
+              </tr>
+            <% end %>
+          </tbody>
+          </table>
+              </div>
+            
+          </div>
+
+          </div>
     </div>
-  
-</div>
-
-</div>
-
-
-   
- 
- 
-<br>
-
+</section>

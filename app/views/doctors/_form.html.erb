@@ -1,3 +1,4 @@
+<div class="text-right">
 <%= form_with(model: doctor, local: true) do |form| %>
   <% if doctor.errors.any? %>
     <div id="error_explanation">
@@ -10,28 +11,31 @@
       </ul>
     </div>
   <% end %>
-  <div class="form-group font-weight-bold">
-        <div class="col-md-5 mb-2 text-white"> 
-          <%= form.label :name %>
-          <%= form.text_field :name %>
-        </div> 
+  
+ 
+  <%= form.text_field :name %>
+        <label for="doctor_name">  :  الدكتور  </label><br>
+          
+     
         
-           <div class="col-md-5 mb-2 text-white"> 
-       <%= form.label :img %>
         <%= form.text_field :img %>
-        </div>
+          <label for="image">  :  الصوره  </label><br>
+     
+       
 
-        <div class="col-md-9 mb-2 text-white">
-          <%= form.label :speciality %>
-          <%= form.text_field :speciality %>
-        </div> 
-        <div class="col-md-9 mb-2 text-white">
-          <%= form.label :description %>
+         <%= form.text_field :speciality %>
+         <label for="speciality">  :  التخصص  </label><br>
+         
+      
+        
           <%= form.text_field :description %>
-        </div> 
+          <label for="description">  :  التعريف  </label><br>
+          
+      
         <div class="col-md-5 mb-2">
-          <%= form.submit "Add Doctor", class:"btn btn-primary my-2"%>
+          <%= form.submit "إضافه  ", class:"btn btn-primary my-2"%>
         </div>
   </div>
 
 <% end %>
+</div>
