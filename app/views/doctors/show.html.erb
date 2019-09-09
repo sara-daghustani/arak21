@@ -19,21 +19,43 @@
         
         </p>
 
-        <p>
-          <strong>التخصص : </strong>
-          <%= @doctor.speciality %>
-        </p>
-        <p>
-          <strong>الوصف : </strong>
-          <%= @doctor.description %>
-        </p>
-        <p>
-        <%= image_tag(@doctor.img, size: "150x150", alt: "Doctor Image") %>
-        <strong>:  الصوره </strong>
-        </p>
-        <br>
-       
-        </div>
-        </div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                                <h6 class="mb-4"><%=@doctor.name%></h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>:اسم الدكتور</label>
+                                            </div>
+                                        </div>
+                                        <%if user_signed_in?%>
+                                       
+                                        <div class="row">
+                                         <div class="col-md-6">
+                                                <h6 class="mb-4">  <%= @doctor.speciality %> </h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label> :التخصص</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                         <div class="col-md-6">
+                                                <h6 class="mb-4">  <%= @doctor.description %> </h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label> :المعلومات </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                         <div class="col-md-6">
+                                                <h6 class="mb-4"> <%= image_tag(@doctor.img, alt: "Doctor Image") %> </h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label> :صورة الدكتور</label>
+                                            </div>
+                                        </div>
+                                        <%end%>
+                                      </div>
+      </div>
     </div>
 </section>
