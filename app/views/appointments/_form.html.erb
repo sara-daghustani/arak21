@@ -1,46 +1,30 @@
 
 <div class="text-right">
-<%= form_with(model: appointment, local: true) do |form| %>
-  <% if appointment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+  <%= form_with(model: appointment, local: true) do |form| %>
+    <% if appointment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+        <ul>
+        <% appointment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %>
+            <label for="doctor_name">  :  الدكتور  </label><br>
+          <% if user_signed_in?%>
+            <%= current_user.first_name + " " + current_user.last_name%>
+            <label for="Patient">  :  المريض  </label><br>
+          <%= form.hidden_field :user_id , :value => current_user.id%>
+          <%end%>
 
-      <ul>
-      <% appointment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  
-
-       
-       
-          <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %>
-          <label for="doctor_name">  :  الدكتور  </label><br>
-
-          
-         <% if user_signed_in?%>
-          <%= current_user.first_name + " " + current_user.last_name%>
-          <label for="Patient">  :  المريض  </label><br>
-      
-
-        
-        <%= form.hidden_field :user_id , :value => current_user.id%>
-        <%end%>
-
-        <%= form.datetime_select :appointment_on %>
-        <label for="user_id">  :  الموعد في   </label><br><br>
-         
-      
-
-       
-          <%# Submit%>
-          <%= form.submit "إنشاء موعد ", class:"btn btn-outline-secondary my-2"%><br>
-        
-        
-    </div>
-  <% end %>
-
+          <label for="user_id">  :  الموعد في   </label>
+          <div dir="rtl">
+          <%= form.datetime_select( :appointment_on, start_year: 2019, ampm: true, :minute_step => 30, start_hour: 9, end_hour: 22, prompt: {  minute: 'اختر الدقائق', hour: "اختر الساعة", day: 'اختر اليوم', month: 'اختر الشهر' , year: 'اختر السنه'} ) %>
+          </div>
+            <%= form.submit "إنشاء موعد ", class:"btn btn-outline-secondary my-2"%><br>
+      </div>
+    <% end %>
 </div>

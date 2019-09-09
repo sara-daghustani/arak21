@@ -1,35 +1,22 @@
-   <section class="service-sec mt-5">
-   <div class="mt-5 text-center mx-auto ">
-      <p>مجمع آراك الرقمي الطبي المتخصص في طب الأسنان </p>             
-                
-                
+<section class="service-sec mt-5">
+        <div class="text-center mx-auto mt-5">
+        <p>مجمع آراك الرقمي لطب الأسنان </p>            
                 <div class="card border-light mb-3 mx-auto text-right" style="width: 60rem;" >
-                <div class="card-body">
-                <h5 class="card-title text-center">موعد جديد </h5>
-
-                
-                <p class="d-flex justify-content-between">
-                <%= link_to 'رجوع', appointments_path %>
-                <%if user_signed_in?%>
-                ! مرحباً  <%= current_user.first_name + " "+current_user.last_name%> 
-                        <%end%>
-                        </p>
-
-                <h1 class="display-5">إنشاء موعد </h1>
-                
-                
+                        <div class="card-body">
+                                <h5 class="card-title text-center">موعد جديد </h5>
+                                <p class="d-flex justify-content-between">
+                                <%= link_to 'رجوع', appointments_path %>
+                                <%if user_signed_in?%>
+                                
+                                <%= current_user.first_name + " "+current_user.last_name%> 
+                                <%end%></p>
+                                <h1 class="display-5">إنشاء موعد </h1>
                                 <% if !user_signed_in? %>
                                         <%=link_to "تسجيل الدخول ", new_user_session_path, class:"nav-link"%>
-                        <%else%>
-
-                        <p><%= render 'form', appointment: @appointment %></p>
+                                <%else%>
+                                <p><%= render 'form', appointment: @appointment %></p>
                                 <%end%>
-
                         </div>
-                        
-                
                 </div>
-                </div>
-                </div>
-</div>
+        </div>
 </section>
