@@ -7,8 +7,7 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 validates :first_name, :last_name, :phone, presence: true
-validates :first_name, :format => { :with => /\A(?=.*[a-z])[a-z\d]+\Z/i}
-validates :last_name, :format => { :with => /\A(?=.*[a-z])[a-z\d]+\Z/i}
+validates :first_name,:last_name, :format => { :with => /\A(?=.*[a-zء-ي])[a-z\d]+\Z/i}
 
 validates_length_of :phone, is: 10
 
