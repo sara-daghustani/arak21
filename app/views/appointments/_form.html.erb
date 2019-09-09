@@ -13,18 +13,18 @@
     </div>
   <% end %>
 
-    <div class="form-group font-weight-bold ">
+  
 
        
        
           <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %>
           <label for="doctor_name">  :  الدكتور  </label><br>
 
-          <%= "Patient" %> <br>
+          
          <% if user_signed_in?%>
           <%= current_user.first_name + " " + current_user.last_name%>
-       
-        </div> 
+          <label for="Patient">  :  المريض  </label><br>
+      
 
         
         <%= form.hidden_field :user_id , :value => current_user.id%>

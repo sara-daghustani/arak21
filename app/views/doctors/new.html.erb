@@ -1,23 +1,21 @@
 
+<div class="card border-light mb-3 mx-auto text-right" style="width: 40rem;" >
+<div class="card-body">
+  <h5 class="card-title text-center"> دكتور جديد    </h5>
 <div class="container">  
-   <div class="text-black jumbotron my-4 text-white">
-  <%= link_to 'Back', doctors_path %>
+
+  <%= link_to 'رجوع ', doctors_path %>
      <p class="d-flex justify-content-end">
             <%if user_signed_in?%>
-            Welcome <%= current_user.email%>
+            ! مرحباً  <%= current_user.first_name%> 
             <%end%>
       </p>
       
-      <div class="row align-items-center">
-         <div class="col-lg-5">
-            <h1 class="display-5">Add Doctor</h1>
+    
+            <h2 class="display-5">إضافه دكتور  </h2>
             <p><%= render 'form', doctor: @doctor %></p>
-         </div>
-         <div class="col-lg-7">
-            <h1 class=" display-3"> add a doctor</h1>
-            <%=image_tag("",class:"img-fluid rounded" )%>
-         </div>
-      </div>
-   </div>
+         
+   
 </div>
-
+</div>
+</div>
