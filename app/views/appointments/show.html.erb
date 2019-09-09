@@ -1,5 +1,4 @@
  <p id="notice"><%= notice %></p>
-
 <section class="service-sec mt-5">
   <div class="text-center mx-auto">
       <p>مجمع آراك الرقمي الطبي المتخصص في طب الأسنان </p>     
@@ -18,7 +17,7 @@
         <%= @appointment.doctor.name%>
         <strong>  الدكتور  </strong>
       </p>
-
+      <%if user_signed_in?%>
       <p>
         <strong> المريض </strong>
         <%= current_user.first_name+" "+ current_user.first_name%>
@@ -35,6 +34,7 @@
       <%= @appointment.user.phone%>
       <%end%>
       </p>
+      <%end%>
 
 
       <%= link_to 'تعديل', edit_appointment_path(@appointment) %> |

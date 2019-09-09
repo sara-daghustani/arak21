@@ -1,5 +1,6 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /appointments
   # GET /appointments.json
@@ -42,10 +43,11 @@ def byDoctor
   def create
     # (params[:appointment])
     @appointment = Appointment.new(appointment_params)
-    @appointment.appointment_on =  DateTime.new(params[:appointment]["appointment_on(1i)"].to_i, 
+    @appointment.appointment_on =  DateTime.new( 
     params[:appointment]["appointment_on(2i)"].to_i,
     params[:appointment]["appointment_on(3i)"].to_i,
     params[:appointment]["appointment_on(4i)"].to_i)
+    # params[:appointment]["appointment_on(1i)"].to_i,
     # params[:appointment]["appointment_on(5i)"].to_i
     # @appointment.appointment_on = params[:appointment]
     # new DateTime(data.Year, data.Month, data.Day, data.Hour, data.Minute, 59, 999);
