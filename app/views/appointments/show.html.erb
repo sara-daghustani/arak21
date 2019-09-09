@@ -1,42 +1,47 @@
-<div class="card border-light mb-3 mx-auto text-right" style="width: 40rem;" >
-<div class="card-body">
-  <h5 class="card-title text-center"> </h5> 
+<section class="service-sec mt-5">
+  <div class="card text-center mx-auto border-light"  style="max-width: 72rem;">
+      <p>مجمع آراك الرقمي الطبي المتخصص في طب الأسنان </p>     
+      <div class="card border-dark mb-3 mx-auto text-right" style="width: 40rem;" >
+      <div class="card-body">
+        <h5 class="card-title text-center"> </h5> 
 
-<p id="notice"><%= notice %></p>
+      <p id="notice"><%= notice %></p>
 
-<p>
-<%= @appointment.appointment_on %>
-  <strong>  : التاريخ </strong>
+      <p>
+      <%= @appointment.appointment_on %>
+        <strong>  : التاريخ </strong>
 
-</p>
-
-
-
-<p>
-  
-  <%= @appointment.doctor.name%>
-  <strong>  : الدكتور  </strong>
-</p>
-
-<p>
-  <strong>  :المريض </strong>
-  <%= current_user.first_name+" "+ current_user.first_name%>
-</p>
-<p>
-<%if current_user.try(:admin?)%>
-
-<strong>Patient email: </strong>
-<%= @appointment.user.email%>
-</p>
-
-<p>
-<strong>Patient Phone: </strong>
-<%= @appointment.user.phone%>
-<%end%>
-</p>
+      </p>
 
 
-<%= link_to 'تعديل', edit_appointment_path(@appointment) %> |
-<%= link_to 'رجوع', appointments_path %>
-</div>
-</div>
+
+      <p>
+        
+        <%= @appointment.doctor.name%>
+        <strong>  : الدكتور  </strong>
+      </p>
+
+      <p>
+        <strong>  :المريض </strong>
+        <%= current_user.first_name+" "+ current_user.first_name%>
+      </p>
+      <p>
+      <%if current_user.try(:admin?)%>
+
+      <strong>Patient email: </strong>
+      <%= @appointment.user.email%>
+      </p>
+
+      <p>
+      <strong>Patient Phone: </strong>
+      <%= @appointment.user.phone%>
+      <%end%>
+      </p>
+
+
+      <%= link_to 'تعديل', edit_appointment_path(@appointment) %> |
+      <%= link_to 'رجوع', appointments_path %>
+      </div>
+      </div>
+  </div>
+</section>
