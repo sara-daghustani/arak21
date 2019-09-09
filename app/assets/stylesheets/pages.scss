@@ -4,6 +4,9 @@
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 @import url(http://fonts.googleapis.com/earlyaccess/lateef.css); 
 
+row{
+  justify-content: center;
+}
 
 .img-d{
   width: 100vw;
@@ -156,7 +159,7 @@ h1, h2, h3, h4, h5 {
 }
 .btn-transparent-white:hover, .btn-transparent-white:focus {
   background: #fff;
-  color: #79d3db;
+  color: #79d3db
 }
 
 section {
@@ -170,11 +173,11 @@ section {
 .dot {
 height: 10px;
 width: 10px;
-background-color: #101111;
+background-color: rgb(173, 172, 172);
 border-radius: 50%;
-margin-left:5px;
 display: inline-block;
 }
+
 
 .emp-profile{
   padding: 3%;
