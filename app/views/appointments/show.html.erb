@@ -1,45 +1,72 @@
- <p id="notice"><%= notice %></p>
+
 <section class="service-sec mt-5">
-  <div class="text-center mx-auto">
-  <p>مجمع آراك الرقمي لطب الأسنان </p>    
-      <div class="card border-light mb-3 mx-auto text-right" style="width: 40rem;" >
+  <div class="text-center mx-auto mt-5">
+    <p>مجمع آراك الرقمي لطب الأسنان </p>    
+    <div class="card border-light mb-3 mx-auto text-right" style="width: 40rem;" >
       <div class="card-body">
-      <h5 class="card-title text-center"> </h5> 
-      <p>
-      <%= @appointment.appointment_on %>
-        <strong>  التاريخ </strong>
-      </p>
+            <div class="row mb-5">
+                         <div class="col text-left">
+                          <%= link_to 'تعديل', edit_appointment_path(@appointment), class:"profile-edit-btn"  %> |
+                           <%= link_to 'المواعيد',  appointments_path , class:"profile-edit-btn"  %>
+                          </div>
+                             <h5 class="card-title text-center text-color"> تم انشاء الموعد بنجاح </h5>
+                      </div>
 
-
-
-      <p>
-        
-        <%= @appointment.doctor.name%>
-        <strong>  الدكتور  </strong>
-      </p>
-      <%if user_signed_in?%>
-      <p>
-        <strong> المراجع </strong>
-        <%= current_user.first_name+" "+ current_user.first_name%>
-      </p>
-      <p>
-      <%if current_user.try(:admin?)%>
-
-      <strong>Patient email: </strong>
-      <%= @appointment.user.email%>
-      </p>
-
-      <p>
-      <strong>Patient Phone: </strong>
-      <%= @appointment.user.phone%>
-      <%end%>
-      </p>
-      <%end%>
-
-
-      <%= link_to 'تعديل', edit_appointment_path(@appointment) %> |
-      <%= link_to 'رجوع', appointments_path %>
+            <div class="row">
+                                <div class="col-md-6">
+                                                <h6 class="mb-4"><%= @appointment.appointment_on %></h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>:الموعد</label>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                                <h6 class="mb-4"><%=@appointment.doctor.name%></h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>:اسم الدكتور</label>
+                                            </div>
+                                        </div>
+                                        <%if user_signed_in?%>
+                                        <div class="row">
+                                         <div class="col-md-6">
+                                                <h6 class="mb-4">  <%= current_user.first_name+" "+ current_user.first_name%></h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label> :اسم المريض</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                         <div class="col-md-6">
+                                                <h6 class="mb-4">  <%= current_user.first_name+" "+ current_user.first_name%></h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label> :اسم المريض</label>
+                                            </div>
+                                        </div>
+                                        <%if current_user.try(:admin?)%>
+                                        <div class="row">
+                                         <div class="col-md-6">
+                                                <h6 class="mb-4">  <%= @appointment.user.email%> </h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label> :البريد الإلكتروني للمريض</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                         <div class="col-md-6">
+                                                <h6 class="mb-4">  <%= @appointment.user.phone%> </h6>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label> :رقم جوال المريض</label>
+                                            </div>
+                                        </div>
+                                         <%end%>
+                                         <%end%>
+                                      </div>
       </div>
-      </div>
+    </div>
   </div>
 </section>
