@@ -1,39 +1,29 @@
+
 <div class="text-right">
-<%= form_with(model: doctor, local: true) do |form| %>
-  <% if doctor.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(doctor.errors.count, "error") %> prohibited this doctor from being saved:</h2>
+  <%= form_with(model: doctor, local: true) do |form| %>
+    <% if doctor.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(doctor.errors.count, "error") %> prohibited this doctor from being saved:</h2>
+        <ul>
+        <% doctor.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-      <ul>
-      <% doctor.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
- 
-  <%= form.text_field :name %>
-        <label for="doctor_name">  :  الدكتور  </label><br>
+          <label for="image">  : أضف صورة  </label><br>
+          <%= form.text_field :img %> <br><br>
+
+          <label for="doctor_name">  : الدكتور </label><br>
+          <%= form.text_field :name %> <br><br>
+
+          <label for="speciality">  : التخصص </label><br>
+          <%= form.text_field :speciality %><br><br>
           
-     
-        
-        <%= form.text_field :img %>
-          <label for="image">  :  الصوره  </label><br>
-     
-       
+          <label for="description">: معلومات </label><br>
+            <%= form.text_field :description %><br>
 
-         <%= form.text_field :speciality %>
-         <label for="speciality">  :  التخصص  </label><br>
-         
-      
-        
-          <%= form.text_field :description %>
-          <label for="description">  :  التعريف  </label><br><br>
-          
-      
-          <%= form.submit " إضافه ", class:"btn btn-light"%>
-  </div>
-
-<% end %>
+            <%= form.submit "إضافة ", class:"btn btn-light mt-4 mb-2"%>
+    <% end %>
 </div>
