@@ -1,20 +1,24 @@
-<div class="card border-light mb-3 mx-auto text-right" style="width: 60rem;" >
-<div class="card-body">
-  <h5 class="card-title text-center">موعد جديد </h5>
+<section class="service-sec mt-5">
+  <div class="text-center mx-auto">  
+            <div class="card border-light mb-3 mx-auto text-right" style="width: 60rem;" >
+            <div class="card-body">
+            <h5 class="card-title text-center">موعد جديد </h5>
 
-  <p class="d-flex justify-content-between">
-  <%= link_to 'إظهار', @doctor %> <%= link_to 'رجوع', doctors_path %>
-  
-            <%if user_signed_in?%>
-            ! مرحباً  <%= current_user.first_name + " "+current_user.last_name%> 
-            <%end%>
-      </p>
-      
-      
-            <h1 class="display-5">تعديل</h1>
-            <p><%= render 'form', doctor: @doctor %></p>
-       </div>
-  
-</div>
-</div>
-</div>
+            <p class="d-flex justify-content-between">
+            <%= link_to 'إظهار', @doctor %> <%= link_to 'رجوع', doctors_path %>
+            
+                        <%if user_signed_in?%>
+                        ! مرحباً  <%= current_user.first_name + " "+current_user.last_name%> 
+                        <%end%>
+                  </p>
+                  
+                  
+                        <h1 class="display-5">تعديل</h1>
+                        <p><%= render 'form', doctor: @doctor %></p>
+                  </div>
+            
+            </div>
+            </div>
+            </div>
+      </div>
+</section>
