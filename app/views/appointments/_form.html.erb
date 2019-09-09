@@ -15,7 +15,7 @@
             <label for="doctor_name">  :  الدكتور  </label><br>
           <% if user_signed_in?%>
             <%= current_user.first_name + " " + current_user.last_name%>
-            <label for="Patient">  :  المريض  </label><br>
+            <label for="Patient">  :  المراجع  </label><br>
           <%= form.hidden_field :user_id , :value => current_user.id%>
           <%end%>
 
