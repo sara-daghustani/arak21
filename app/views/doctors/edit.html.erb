@@ -4,14 +4,13 @@
             <p> مجمع آراك الرقمي لطب الأسنان  </p>
             <div class="card border-light mb-3 mx-auto text-right" style="width: 60rem;" >
                   <div class="card-body">
-                              <div class="row mb-5">
+                              <div class="row mb-2">
                                     <div class="col text-left">
                                       <%= link_to 'إظهار', @doctor, class:"profile-edit-btn" %>|
                                       <%= link_to 'رجوع', doctors_path, class:"profile-edit-btn" %>  
                                     </div>
-                                    <h5 class="card-title text-center text-color"> إنشاء موعد </h5>
+                                    <h5 class="card-title text-center text-color"> تعديل معلومات الدكتور </h5>
                               </div>
-                        <h1 class="display-5">تعديل</h1>
                         <p><%= render 'form', doctor: @doctor %></p>
                   </div>
             </div> 

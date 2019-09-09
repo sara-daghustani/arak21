@@ -1,16 +1,16 @@
 
 <div class="text-right">
   <%= form_with(model: appointment, local: true) do |form| %>
-    <% if appointment.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
-        <ul>
-        <% appointment.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
+      <% if appointment.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+            <ul>
+            <% appointment.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+      <% end %>
 
      <label for="doctor_name">  :الدكتور </label><br>
      <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %> <br><br>
@@ -22,10 +22,10 @@
       <%end%>
 
           <label for="user_id">  :تاريخ الموعد </label><br>
-          <div dir="rtl">
+         
           <%= form.datetime_select( :appointment_on, start_year: 2019, ampm: true, :minute_step => 30, start_hour: 9, end_hour: 22, prompt: {  minute: 'اختر الدقائق', hour: "اختر الساعة", day: 'اختر اليوم', month: 'اختر الشهر' , year: 'اختر السنه'} ) %>
-          </div><br>
-            <%= form.submit "إنشاء موعد ", class:"btn btn-light"%>
-      </div>
-    <% end %>
+        <br>
+       <%= form.submit "إنشاء موعد ", class:"btn btn-light mt-4 mb-2"%>
+   
+    <% end %>  
 </div>
