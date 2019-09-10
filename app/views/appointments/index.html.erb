@@ -31,14 +31,14 @@
           <tbody>
             <% @appointments.each do |appointment| %>
               <tr scope="row" >
-              <td><%= link_to 'إظهار', appointment %></td>
-              <td><%= link_to 'تعديل', edit_appointment_path(appointment) %></td>
+              <td><%= link_to 'إظهار', appointment ,class:" profile-edit-btn"%></td>
+              <td><%= link_to 'تعديل', edit_appointment_path(appointment),class:" profile-edit-btn" %></td>
               
-              <td><%= link_to 'حذف', appointment, method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
+              <td><%= link_to 'حذف', appointment, class:" profile-edit-btn",method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
               <td><%= appointment.appointment_on %></td>
               <td><%= appointment.doctor.speciality %></td>
               <%if current_user.try(:admin?)%>
-              <td><%= link_to appointment.doctor.name, "/appointments/doctors/#{appointment.doctor.name}"%></td>
+              <td><%= link_to appointment.doctor.name, "/appointments/doctors/#{appointment.doctor.name}",class:" profile-edit-btn"%></td>
               <%else%>
               <td><%= appointment.doctor.name %></td>
               <%end%>
