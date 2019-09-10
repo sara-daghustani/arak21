@@ -7,6 +7,7 @@ gem 'bson_ext'
 gem 'bootstrap-sass', '~> 3.3.6'  
 gem 'bootstrap', '~> 4.3.1'
 gem "letter_opener", :group => :development
+gem 'flatpickr_rails'
 
 gem "devise"
 gem 'jquery-rails'
