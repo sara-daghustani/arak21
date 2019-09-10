@@ -5,7 +5,8 @@ class DoctorsController < ApplicationController
   # GET /doctors
   # GET /doctors.json
   def index
-    @doctors = Doctor.all
+    @search = params[:search]
+    @doctors = Doctor.where(name: /^#{@search}/i)
   end
 
   # GET /doctors/1

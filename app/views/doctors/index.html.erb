@@ -12,9 +12,14 @@
                             <%= link_to new_doctor_path do %>
                                 <i > إضافة دكتور </i >
                                 <i class="fa fa-plus"></i>
+                                
                                 <%end%>
                             <%end%>
                         </div>
+                        <%= form_tag doctors_path, :method =>'get' do%>
+                  <%= text_field_tag :search, params[:search]%>
+                  <%= submit_tag 'Search'%>
+                  <% end%>
                     <div class="row">
                     <% @doctors.each do |doctor| %>
                         <div class="col-lg-3 col-sm-6">
