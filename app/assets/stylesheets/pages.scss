@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 @import url(http://fonts.googleapis.com/earlyaccess/lateef.css); 
-
+.text{
+  color: #74cfd8;
+}
 .row{
   justify-content: center;
 }
@@ -99,7 +101,6 @@ right: 5%;
     border: 1px solid #79d3dbbb;
     border-radius: 1px;
     font-size: 25px;
-    padding: 1px 7px;
     width: 60px;
     color: #79d3db;
     margin-bottom: 20px;
@@ -216,7 +217,7 @@ display: inline-block;
 }
 .profile-img img{
   width: 200px ;
-  height: 180px;
+  height: 150px;
 }
 .profile-img .file {
   position: relative;

@@ -1,62 +1,76 @@
-<div class="card border-light mb-3 mx-auto text-right" style="width: 35rem;" >
-<div class="card-body">
-  <h5 class="card-title text-center"> تعديل البيانات  </h5>
-<h4>Edit <%= resource_name.to_s.humanize %></h4>
+<section class="service-sec mt-5">
+    <div class="mt-5 text-center mx-auto ">
+      <p>مجمع آراك الرقمي لطب الأسنان </p>      
+      
+      <div class="card border-light mb-3 mx-auto text-right" style="width: 35rem;" >
+      <div class="card-body">
+        
+        <div class="row mb-5">
+          <div class="col text-left">
+              <%= link_to 'رجوع', profile_path, class:"edit-links links" %> |
+              <%= link_to 'حذف حسابي', registration_path(resource_name), class:"edit-links links", data: { confirm: "هل آنت متأكد أنك تريد حذف حسابك ؟" }, method: :delete %>  
+          </div>
+        <h5 class="card-title text-center text-color"> تعديل البيانات  </h5>
+      </div>
+      
+      <form>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-<div class="field">
-<label for="first_name">الاسم الأول </label><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "first name" %>
+          <div class="row mt-4">
+            <div class="col">
+                  <label for="last_name"> الأسم الأخير </label><br />
+              <%= f.text_field :last_name, autofocus: true, autocomplete: "الإسم الأخير" %>
+            </div>
+            <div class="col">
+                <label for="first_name"> الأسم الأول </label><br />
+            <%= f.text_field :first_name, autofocus: true, autocomplete: "الإسم الأول" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col">
+                <label for="phone_number"> رقم الهاتف </label><br />
+                <%= f.text_field :phone, autofocus: true, autocomplete: "phone" %>
+            </div>
+            <div class="col">
+                <label for="email"> البريد الإلكتروني  </label><br />
+                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+          </div>
+          <br>
+        
+          <div class="row mt-0">     
+            <div class="col">
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                  <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                <% end %>
+                <label for="password_confirmation"> تأكيد كلمة المرور  </label><br />
+                  <%= f.password_field :password_confirmation, autocomplete: "تأكيد كلمة المرور الجديدة" %>
+            </div>
+            <div class="col">
+                <label for="password"> كلمة المرور </label> <br />
+                  <%= f.password_field :password, autocomplete: "كلمة المرور الجديدة" %>
+                   <% if @minimum_password_length %>
+                    <br />
+                    <em><%= @minimum_password_length %> characters minimum</em>
+                  <% end %>
+            </div>
+            <i>(اترك كلمة المرور فارغه في حال عدم الرغبة بتغييره)</i>
+          </div>
+          <div class="row mt-4">
+            <div class="col mb-4">
+                <label for="password_confirmation">كلمة المرور الحاليه </label> <br />
+                  <%= f.password_field :current_password, autocomplete: "كلمة السر الحالية" %> <br>
+                   <i>(نحتاج كلمة المرور الحاليه لإجراء التغييرات )</i>
+            </div>
+          </div>
+                <div class="actions">
+                  <%= f.submit "تحديث",class:"btn btn-light mt-4 mb-2" %>
+                </div>
+                
+        </form>
+      <% end %>
+ <br>
+ <br>
   </div>
-
-  <div class="field">
-  <label for="last_name"> الأسم الأخير </label><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "first name" %>
-  </div>
-  <div class="field">
-  <label for="phone_number"> رقم الهاتف </label><br />
-    <%= f.text_field :phone, autofocus: true, autocomplete: "phone" %>
-  </div>
-  
-  <div class="field">
-  <label for="email"> البريد الإلكتروني  </label><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-  <i>(اتركه فارغ في حال عدم الرغبة بالتغيير)</i>
-  <label for="password"> كلمة المرور </label> <br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-  <label for="password_confirmation"> تأكيد كلمة المرور  </label><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-  <i>(نحتاج كلمة المرور الحاليه لإجراء التغييرات )</i>
-  <label for="password_confirmation">  كلمة المرور الحاليه</label> <br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "تحديث" %>
-
-  </div>
-
-<% end %>
-<%= link_to 'رجوع', profile_path %> &nbsp;
-<%= link_to 'حذف حسابي', registration_path(resource_name), data: { confirm: "هل آنت متأكد أنك تريد حذف حسابك ؟" }, method: :delete %> 
-</div>
-</div>
+</section>

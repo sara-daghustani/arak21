@@ -27,7 +27,7 @@
                     
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="https://www.sgbt.lu/uploads/tx_bisgbio/default-profile_01.png" alt=""/>
+                            <img src="users.svg"/>
                         </div>
                     </div> 
                     
@@ -70,8 +70,8 @@
                      <div class="col-md-4">
                                         <div class="profile-work ">
                                              <label> روابط سريعة </label><br/>
-                                              <%= link_to  "دفتر المواعيد", class:" links"%><br/> 
-                                              <%= link_to 'انشاء موعد', class:"links"%><br/> 
+                                              <%= link_to  "دفتر المواعيد",appointments_path ,class:" links"%><br/> <br>
+                                              <%= link_to 'انشاء موعد',  new_appointment_path,class:"links"%><br/> 
                                         </div>
                                     </div>   
                 </div>  

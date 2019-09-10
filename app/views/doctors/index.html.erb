@@ -1,11 +1,10 @@
-<p id="notice"><%= notice %></p>
-​
+
 <section class="service-sec mt-5">
     <div class="mt-5 text-center mx-auto ">
       <p>مجمع آراك الرقمي لطب الأسنان </p>
         <div class="card border-light mb-3 mx-auto " style="width: 80rem;" >
             <div class="card-body">
-                <h5 class="card-title text-center"> فريق اراك  </h5>
+                <h5 class="card-title text-center text"> فريق اراك  </h5>
                 
                 <div class="container">
                         <div class="text-right">
@@ -40,10 +39,12 @@
                                     <div class="backside">
                                         <div class="card hovercard">
                                             <div class="cardheader">
+                                            <% if user_signed_in?%>
                                             <% if current_user.admin == true %>
                                             <%= link_to "حذف", doctor_path(doctor), method: :delete, data: {confirm:"هل أنت متأكد من الحذف ؟"}%>&nbsp;
                                                 <%= link_to "تعديل", edit_doctor_path(doctor)%>&nbsp;
                                                 <%= link_to 'إظهار', @doctor %> &nbsp;
+                                                <%end%>
                                                 <%end%>
                                             </div>
                                             <div class="avatar">
