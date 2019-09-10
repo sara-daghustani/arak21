@@ -21,8 +21,11 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  
 }
-
+.card_shadow{
+    box-shadow: 3px 3px 3px 3px  #8e8c8c80;
+}
 
 .card .card-body {
     padding: 0 20px;
@@ -98,8 +101,8 @@
 .backside .card {
     min-height: 300px;
     max-height: 300px;
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 260px;
+    max-width: 260px;
 }
 
 
