@@ -23,9 +23,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">صفحتي</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <%=link_to "معلوماتي", profile_path, class:"dropdown-item"%>
-                                <%=link_to "المواعيد", appointments_path, class:"dropdown-item"%>
-                                    <%=link_to "تسجيل الخروج", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
+                            <%=link_to "معلوماتي", profile_path, class:"dropdown-item text-right"%>
+                                <%=link_to "المواعيد", appointments_path, class:"dropdown-item text-right"%>
+                                    <%=link_to "تسجيل الخروج", destroy_user_session_path, method: :delete, class:"dropdown-item text-right" %>
                         </div>
                     </li>
                     <%else%>

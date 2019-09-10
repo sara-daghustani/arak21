@@ -4,7 +4,7 @@
       <p>مجمع آراك الرقمي لطب الأسنان </p>
         <div class="card border-light mb-3 mx-auto  ">
             <div class="card-body">
-                <h5 class="card-title text-center text"> فريق اراك  </h5>
+                <h5 class="card-title text-center text"> فريق اراك  </h5>      
                 
                 <div class="container ">
                         <div class="text-right">
@@ -13,8 +13,9 @@
                             <%end%>
                         </div>
                         <%= form_tag doctors_path, :method =>'get' do%>
+                            <%= submit_tag 'بحث',class:"btn btn-light"%>
                   <%= text_field_tag :search, params[:search]%>
-                  <%= submit_tag 'Search'%>
+                  
                   <% end%>
                     <div class="row mt-4 ">
                     <% @doctors.each do |doctor| %>
