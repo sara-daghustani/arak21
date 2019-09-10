@@ -9,13 +9,10 @@
                 <div class="container ">
                         <div class="text-right">
                             <% if current_user.try(:admin?)%>
-                            <%= link_to new_doctor_path do %>
-                                <i > إضافة دكتور </i >
-                                <i class="fa fa-plus"></i>
-                                <%end%>
+                            <%= link_to "إضافة دكتور", new_doctor_path , class:"profile-edit-btn"%> 
                             <%end%>
                         </div>
-                    <div class="row ">
+                    <div class="row mt-4 ">
                     <% @doctors.each do |doctor| %>
                         <div class="col-lg-3 col-sm-6">
                             <div class="image-flip ">
