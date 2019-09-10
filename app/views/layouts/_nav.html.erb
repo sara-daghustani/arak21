@@ -12,12 +12,12 @@
                 <%= image_tag("arak-logo.png",alt:"Third slide", height: '70', width: '70' ,alt:'logo',title:'ARAK') %>
             </a>
             <div class="w-100 text-right">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
             </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarCollapse1">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav ml-auto">
                 <%if user_signed_in? %>
                     <li class="nav-item dropdown">
@@ -56,3 +56,4 @@
         </div>
     </div>
 </nav>
+
