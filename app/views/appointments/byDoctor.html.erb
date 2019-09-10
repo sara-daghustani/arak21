@@ -1,52 +1,56 @@
 
 <section class="service-sec mt-5">
-  <div class="text-center mx-auto mt-5">
-   <p>مجمع آراك الرقمي الطبي المتخصص في طب الأسنان </p>
-        <div class="card border-light mb-3 mx-auto" >
-        <div class="card-body">
-          <h5 class="card-title text-center">مواعيدي</h5> 
-          <div class="container">  
-            <p class="d-flex justify-content-between">
-            <%= link_to 'موعد جديد', new_appointment_path,  class:"btn btn-light" %>
-        <table class="table  text-center">
-        <thead>
-          <tr>
-          <th colspan="3"></th>
-            <th scope="col">التاريخ</th>
-            <th scope="col">التخصص</th>
-            <th scope="col">الدكتور</th>
-              <%if user_signed_in?%> 
-            <%if current_user.try(:admin?)%>
-            <th scope="col">المراجع</th>
-            <%end%>
+  <div class="mt-5 text-center mx-auto ">
+      <p>مجمع آراك الرقمي الطبي المتخصص في طب الأسنان </p>
+        <div class="card border-light mb-3 mx-auto " >
+          <div class="card-body">
+              <h5 class="card-title text-center text-color"> المواعيد </h5>
+              <div class="row mb-5">
+                        <div class="col text-left">
+                          <%= link_to 'موعد جديد', new_appointment_path,  class:"profile-edit-btn" %> |
+                          <%= link_to 'رجوع', appointments_path, class:"profile-edit-btn"  %>
+                        </div>
+              </div>
 
-          </tr>
-        </thead>
-        <tbody>
-          <% @appointments.each do |appointment| %>
-            <tr scope="row" >
-            <td><%= link_to 'إظهار', appointment %></td>
-            <td><%= link_to 'تعديل', edit_appointment_path(appointment) %></td>
-            
-            <td><%= link_to 'حذف', appointment, method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
-            <td><%= appointment.appointment_on %></td>
-            <td><%= appointment.doctor.speciality %></td>
-            <td><%= appointment.doctor.name%></td>
-                <% if current_user.try(:admin?)%>
-            <td><%= appointment.user.first_name%><td>
 
-            <%end%>
-            <%end%>
 
+ <table class="container text-center mr-5  mb-5">
+              <thead>
+            <tr scope="col">
+                       <th colspan="3"></th>
+                      <th>التاريخ</th>
+                      <th>التخصص</th>
+                      <th>الدكتور</th>
+           <%if user_signed_in?%> 
+                      <%if current_user.try(:admin?)%>
+                      <th>المراجع</th>
+                      <%end%>
             </tr>
-          <% end %>
-        </tbody>
-        </table>
-            </div>
-          
-        </div>
+              </thead>
+          <tbody>
+            <% @appointments.each do |appointment| %>
+              <tr scope="row" >
+              <td colspan="3"><%= link_to 'إظهار', appointment ,class:" profile-edit-btn"%>
+              <%= link_to 'تعديل', edit_appointment_path(appointment),class:" profile-edit-btn" %>
+              <%= link_to 'حذف', appointment, class:" profile-edit-btn",method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
+              <td><%= appointment.appointment_on %></td>
+              <td><%= appointment.doctor.speciality %></td>
+              <td><%= appointment.doctor.name%></td>
+              <% if current_user.try(:admin?)%>
+               <td><%= appointment.user.first_name%><td>
+              <%end%>
+                  <% if current_user.try(:admin?)%>
+              <td><%= appointment.user.first_name%><td>
 
+              <%end%>
+              <%end%>
+
+              </tr>
+            <% end %>
+          </tbody>
+          </table>
         </div>
-</div>
+      </div>
+    </div>
 </section>
 
