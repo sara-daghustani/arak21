@@ -32,10 +32,10 @@
                                         <%if user_signed_in?%>
                                         <div class="row">
                                          <div class="col-md-6">
-                                                <h6 class="mb-4">  <%= current_user.first_name+" "+ current_user.first_name%></h6>
+                                                <h6 class="mb-4">  <%= current_user.first_name+" "+ current_user.last_name%></h6>
                                             </div>
                                             <div class="col-md-6">
-                                                <label> :اسم المريض</label>
+                                                <label> :اسم المراجع</label>
                                             </div>
                                         </div>
                                         <%if current_user.try(:admin?)%>
