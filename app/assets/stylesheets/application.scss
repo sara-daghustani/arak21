@@ -31,14 +31,16 @@
   }
 
 
-html, body {
+html{
   height: 100%;
 }
 
 body {
   margin: 0;
   font-family: Cairo;
+  min-height: 100%;
 }
+
 
 .cover-thing {
   width: 100%;
@@ -49,7 +51,9 @@ body {
 
 footer{
   clear: both;
+  text-align: center;
 }
+
 
 .fa-twitter, .fa-snapchat, .fa-whatsapp, .fa-instagram{
 color: #78D3DB;
