@@ -11,6 +11,10 @@
                   <%= link_to 'رجوع', appointments_path, class:"profile-edit-btn"  %>
                   
                 </div>
+                <%= form_tag appointments_path, :method =>'get' do%>
+                  <%= text_field_tag :search, params[:search]%>
+                  <%= submit_tag 'Search'%>
+                  <% end%>
               </div>
          
 
