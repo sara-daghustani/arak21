@@ -7,7 +7,20 @@ class AppointmentsController < ApplicationController
   def index
     if user_signed_in?
     if current_user.admin == true
+      @search = params[:search]
+    if @search 
+   
+    @search = @search.gsub!(/\s+/, '')   if @search.match(/\s/)
+    @user = User.where(first_name: /^#{@search}/ )
+    
+    @appointments = @user.map { |user| Appointment.where({user_id: user._id}) }
+    @appointments.flatten!
+    
+    else 
+    
     @appointments = Appointment.all.order('appointment_on ASC')
+    end
+    
     else
     @appointments = current_user.appointments.order('appointment_on ASC')
     end
@@ -15,17 +28,12 @@ class AppointmentsController < ApplicationController
   end
 
 def byDoctor
-  # if user_signed_in?
-  #   if current_user.admin == true
+ 
   @doctor = Doctor.find_by(name: params[:doctor] )
   @appointments = Appointment.where({doctor_id: @doctor.id }).order('appointment_on ASC')
-#     else
 
-#     end
-#   end
  end
-  # GET /appointments/1
-  # GET /appointments/1.json
+  
   def show
   end
 
