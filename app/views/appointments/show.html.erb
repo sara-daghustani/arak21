@@ -2,7 +2,7 @@
 <section class="service-sec mt-5">
   <div class="text-center mx-auto mt-5">
     <p>مجمع آراك الرقمي لطب الأسنان </p>    
-    <div class="card border-light mb-3 mx-auto text-right" style="width: 40rem;" >
+    <div class="card border-light mb-3 mx-auto text-right" >
       <div class="card-body">
             <div class="row mb-5">
                          <div class="col text-left">
@@ -32,10 +32,10 @@
                                         <%if user_signed_in?%>
                                         <div class="row">
                                          <div class="col-md-6">
-                                                <h6 class="mb-4">  <%= current_user.first_name+" "+ current_user.first_name%></h6>
+                                                <h6 class="mb-4">  <%= current_user.first_name+" "+ current_user.last_name%></h6>
                                             </div>
                                             <div class="col-md-6">
-                                                <label> :اسم المريض</label>
+                                                <label> :اسم المراجع</label>
                                             </div>
                                         </div>
                                         <%if current_user.try(:admin?)%>
@@ -52,7 +52,7 @@
                                                 <h6 class="mb-4">  <%= @appointment.user.phone%> </h6>
                                             </div>
                                             <div class="col-md-6">
-                                                <label> :رقم جوال المريض</label>
+                                                <label> :رقم جوال المراجع </label>
                                             </div>
                                         </div>
                                          <%end%>
