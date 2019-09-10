@@ -1,24 +1,15 @@
 <section class="service-sec mt-5">
   <div class="text-center mx-auto mt-5">
   <p>مجمع آراك الرقمي لطب الأسنان </p>
-        <div class="card bborder-light mb-3 mx-auto text-right" style="width: 50rem;" >
+    <div class="card bborder-light mb-3 mx-auto text-right">
         <div class="card-body">
                       <div class="row mb-5">
                          <div class="col text-left">
                           <%= link_to 'تعديل', edit_doctor_path(@doctor), class:"profile-edit-btn"  %> |
                            <%= link_to 'رجوع', doctors_path, class:"profile-edit-btn"  %>
                           </div>
-                             <h5 class="card-title text-center text-color"> إنشاء موعد </h5>
+                             <h5 class="card-title text-center text-color">معلومات الدكتور</h5>
                       </div>
-        <p id="notice"><%= notice %></p>
-
-        <p>
-        <strong> الاسم : </strong>
-        <%= @doctor.name %>
-        
-        
-        </p>
-
                                         <div class="row">
                                         <div class="col-md-6">
                                                 <h6 class="mb-4"><%=@doctor.name%></h6>
