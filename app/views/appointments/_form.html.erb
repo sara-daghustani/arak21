@@ -23,7 +23,7 @@
 
           <label for="user_id">  :تاريخ الموعد </label><br>
           
-          <%= form.datetime_select( :appointment_on, start_year: 2019, ampm: true, :minute_step => 30, start_hour: 9, end_hour: 22, prompt: {  minute: 'اختر الدقائق', hour: "اختر الساعة", day: 'اختر اليوم', month: 'اختر الشهر' , year: 'اختر السنه'} ) %>
+          <%= form.datetime_select( :appointment_on, start_year: 2019 ,ampm: true, :minute_step => 30, start_hour: 9, end_hour: 22, prompt: {  minute: 'اختر الدقائق', hour: "اختر الساعة", day: 'اختر اليوم', month: 'اختر الشهر' , year: 'اختر السنه'} ) %>
         <br>
        <%= form.submit "إنشاء موعد ", class:"btn btn-light mt-4 mb-2"%>
    
