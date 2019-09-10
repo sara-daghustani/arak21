@@ -12,11 +12,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+
+  <div class="container-main">
+      <div class="container-content">
       <%= render 'layouts/nav' %> 
-      
       <%= yield %> 
-    
-      <footer class="site-footer" style=" position: relative;"> 
+    </div>
+      <footer class="site-footer"> 
             <div class="container text-right">
               <div class="row">
                     <div class="col-md-2">
@@ -56,5 +58,7 @@
               </div>
             </div>
       </footer>
+    </div> 
+
   </body> 
 </html>
