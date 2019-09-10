@@ -1,18 +1,28 @@
-<div class="card border-light mb-3 mx-auto text-right" style="width: 35rem;" >
+<section class="service-sec mt-5">
+<div class="text-center mx-auto mt-5">
+<div class="card border-light mb-3 mx-auto text-right" style="width: 40rem; height:45rem;" >
 <div class="card-body">
-  <h5 class="card-title text-center"> مستخدم جديد</h5>
+  <h2 class="card-title text-center"> مستخدم جديد</h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <%# add frist name, last name and phone number %>
+
+  <div class="row">
+  <div class="col">
   <div class="field">
-  <label for="first_name">الاسم الأول </label><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "first name" %>
+    <label for="last_name"> الأسم الأخير </label><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last name" %>
+  </div>
   </div>
 
   <div class="field">
-  <label for="last_name"> الأسم الأخير </label><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "last name" %>
+  <div class="col">
+  <label for="first_name">الاسم الأول </label><br />
+  <%= f.text_field :first_name, autofocus: true, autocomplete: "first name" %>
   </div>
+  </div>
+  </div>
+  
   <div class="field">
   <label for="phone_number"> رقم الهاتف </label><br />
     <%= f.text_field :phone, autofocus: true, autocomplete: "phone" %>
@@ -23,25 +33,32 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
+<div class="row">
+<div class="col">
   <div class="field">
-
     <% if @minimum_password_length %>
     <em>(  <%= @minimum_password_length %> ارقام على الأقل)</em>
     <% end %>
-    <label for="password"> كلمة المرور </label><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <label for="password_confirmation"> تأكيد كلمة المرور  </label><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
   </div>
 
   <div class="field">
-  <label for="password_confirmation"> تأكيد كلمة المرور  </label><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="col">
+  <label for="password"> كلمة المرور </label><br />
+  <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+  </div>
   </div>
 
   <div class="actions">
-    <%= f.submit "تسجيل" %>
+    <%= f.submit "تسجيل" ,class:"btn btn-light"%>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
 </div>
 </div>
+</div>
+</section>
