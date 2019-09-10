@@ -16,7 +16,7 @@
      <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %> <br><br>
 
       <% if user_signed_in?%>
-          <label for="Patient">  :المريض </label><br>
+          <label for="Patient">  :المراجع </label><br>
           <%= current_user.first_name + " " + current_user.last_name%><br><br>
           <%= form.hidden_field :user_id , :value => current_user.id%>
       <%end%>
