@@ -31,14 +31,16 @@
   }
 
 
-html, body {
-  height: 100%;
+html{
+  height: 100vh;
+
 }
 
 body {
   margin: 0;
   font-family: Cairo;
 }
+
 
 .cover-thing {
   width: 100%;
@@ -48,8 +50,9 @@ body {
 }
 
 footer{
+ 
   clear: both;
-
+  text-align: center;
 }
 
 .fa-twitter, .fa-snapchat, .fa-whatsapp, .fa-instagram{

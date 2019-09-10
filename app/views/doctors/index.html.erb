@@ -2,25 +2,27 @@
 <section class="service-sec mt-5">
     <div class="mt-5 text-center mx-auto ">
       <p>مجمع آراك الرقمي لطب الأسنان </p>
-        <div class="card border-light mb-3 mx-auto " style="width: 80rem;" >
+        <div class="card border-light mb-3 mx-auto  ">
             <div class="card-body">
-                <h5 class="card-title text-center text"> فريق اراك  </h5>
+                <h5 class="card-title text-center text"> فريق اراك  </h5>      
                 
-                <div class="container">
+                <div class="container ">
                         <div class="text-right">
                             <% if current_user.try(:admin?)%>
-                            <%= link_to new_doctor_path do %>
-                                <i > إضافة دكتور </i >
-                                <i class="fa fa-plus"></i>
-                                <%end%>
+                            <%= link_to "إضافة دكتور", new_doctor_path , class:"profile-edit-btn"%> 
                             <%end%>
                         </div>
-                    <div class="row">
+                        <%= form_tag doctors_path, :method =>'get' do%>
+                            <%= submit_tag 'بحث',class:"btn btn-light"%>
+                  <%= text_field_tag :search, params[:search]%>
+                  
+                  <% end%>
+                    <div class="row mt-4 ">
                     <% @doctors.each do |doctor| %>
                         <div class="col-lg-3 col-sm-6">
-                            <div class="image-flip">
-                                <div class="mainflip">
-                                    <div class="frontside">
+                            <div class="image-flip ">
+                                <div class="mainflip ">
+                                    <div class="frontside card_shadow">
                                         <div class="card hovercard">
                                             <div class="cardheader">
                                             </div>
@@ -36,7 +38,7 @@
                                         </div>
                                     </div>
 ​
-                                    <div class="backside">
+                                    <div class="backside ">
                                         <div class="card hovercard">
                                             <div class="cardheader">
                                             <% if user_signed_in?%>
@@ -58,7 +60,7 @@
                                             </div>
                                             <hr>
                                             <div class="bottom">
-                                                <%= link_to "موعد جديد ", new_appointment_path, class:"button" %> <br>    
+                                                <%= link_to "موعد جديد ", new_appointment_path, class:" profile-edit-btn" %> <br>    
                                             </div> 
                                         </div>  
                                     </div>
