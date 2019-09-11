@@ -15,23 +15,23 @@
         </div>
 <%# appointment table, if uer sign it will show the appointment they made.
 if you are admin it will show the user name %>
-        <table class="container text-center mb-5">
-          <thead>
+        <table class=" container table text-center mb-5">
+          <thead class="thead-light">
             <tr scope="col">
-              <th>اعدادات</th>
-              <th>التاريخ</th>
-              <th>التخصص</th>
-              <th>الدكتور</th>
+              <th scope="col">اعدادات</th>
+              <th scope="col">التاريخ</th>
+              <th scope="col">التخصص</th>
+              <th scope="col">الدكتور</th>
               <%if user_signed_in?%> 
                 <%if current_user.try(:admin?)%>
-                  <th>المراجع</th>
+                  <th scope="col">المراجع</th>
                 <%end%>
             </tr>
           </thead>
 
           <tbody>
                 <% @appointments.each do |appointment| %>
-                  <tr scope="row" >
+                  <tr>
                   <td><%= link_to 'إظهار', appointment ,class:" profile-edit-btn"%> | 
                     <%= link_to 'تعديل', edit_appointment_path(appointment),class:" profile-edit-btn" %> | 
                     <%= link_to 'حذف', appointment, class:" profile-edit-btn",method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
@@ -39,7 +39,7 @@ if you are admin it will show the user name %>
                   <td><%= appointment.doctor.speciality %></td>
                   <td><%= appointment.doctor.name%></td>
                   <% if current_user.try(:admin?)%>
-                    <td><%= appointment.user.first_name%><td>
+                    <td><%= appointment.user.first_name%></td>
                   <%end%>
                 <%end%>
                   </tr>
