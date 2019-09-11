@@ -14,5 +14,9 @@
 //= require popper
 //= require bootstrap
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
+
+document.addEventListener("DOMContentLoaded", () => flatpickr('#appointment_appointment_on', {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+}));
