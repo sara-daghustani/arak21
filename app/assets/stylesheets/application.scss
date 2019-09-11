@@ -55,7 +55,7 @@ footer{
   text-align: center;
 }
 
-.fa-twitter, .fa-snapchat, .fa-whatsapp, .fa-instagram{
+.fa-twitter, .fa-snapchat, .fa-whatsapp, .fa-instagram, .fa-bars{
 color: #78D3DB;
 }
 .navbar{
@@ -68,6 +68,7 @@ color: #78D3DB;
   position: fixed;
   top:0;
   clear:both;
+ 
 }
 .navbar-toggler {
   border: 1px solid #fff;
@@ -75,6 +76,7 @@ color: #78D3DB;
   position: absolute;
   right: 21px;
 }
+
 .top-bar a.navbar-brand {
   color: #fff;
   font-size: 26px;
@@ -97,7 +99,8 @@ color: #78D3DB;
 }
 
 .top-bar .navbar-nav .nav-item {
-  margin: 0
+  margin: 0;
+
 }
 .top-bar .nav-link:hover, .top-bar .nav-item.active a {
   color: #fff;
