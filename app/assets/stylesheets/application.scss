@@ -55,11 +55,13 @@ footer{
   text-align: center;
 }
 
-.fa-twitter, .fa-snapchat, .fa-whatsapp, .fa-instagram{
+.fa-twitter, .fa-snapchat, .fa-whatsapp, .fa-instagram, .fa-bars{
 color: #78D3DB;
 }
 .navbar{
   background-color: #e9ecefcf;
+  border-bottom: 2px solid #78D3DB;
+
 }
 .navbar.top-bar {
   border-radius: 0;
@@ -68,13 +70,24 @@ color: #78D3DB;
   position: fixed;
   top:0;
   clear:both;
-}
+ }
+ 
+  .navbar-nav .nav-link {
+    color: #75767A;
+    font-size: 15px;
+    font-family: Cairo;
+    /* text-align: right; */
+    display: inline-block;
+    float: right;
+    border-bottom: 2px solid transparent;
+ }
 .navbar-toggler {
   border: 1px solid #fff;
   color: #fff;
   position: absolute;
   right: 21px;
 }
+
 .top-bar a.navbar-brand {
   color: #fff;
   font-size: 26px;
@@ -97,9 +110,25 @@ color: #78D3DB;
 }
 
 .top-bar .navbar-nav .nav-item {
-  margin: 0
+  margin: 0;
+
 }
 .top-bar .nav-link:hover, .top-bar .nav-item.active a {
   color: #fff;
   border-bottom: 2px solid #79d3db;
+}
+a.nav-link{
+  color:rgb(121, 211, 219);
+}
+a.nav-link.active{
+  color:rgb(89, 92, 92);
+}
+
+.active-blue-4 input[type="text"]:focus:not([readonly]) {
+  border: 1px solid gold;
+  box-shadow: 0 0 0 1px goldenrod;
+}
+.active-blue-3 input[type="text"] {
+  border: 1px solid rgb(240, 48, 48);
+  box-shadow: 0 0 0 1px #f48f8f;
 }

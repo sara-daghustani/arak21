@@ -104,7 +104,7 @@ right: 5%;
     border: 1px solid #79d3dbbb;
     border-radius: 1px;
     font-size: 25px;
-    width: 60px;
+    width: 100px;
     color: #79d3db;
     margin-bottom: 20px;
 }
@@ -154,11 +154,12 @@ right: 5%;
   }
   .about-sec p {
      font-size: 16px;
+     line-height: 28px;
   }
   
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Cairo,'Montserrat', sans-serif;
   display: contents;
   
 }

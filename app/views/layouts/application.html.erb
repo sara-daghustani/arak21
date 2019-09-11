@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AracApp</title>
+    <title>ArakApp</title>
     <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
     <link rel="icon" href="https://png.pngtree.com/svg/20160108/dentist_1285662.png"/>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
   <body>
-
   <div class="container-main">
       <div class="container-content">
       <%= render 'layouts/nav' %> 
@@ -29,14 +30,14 @@
                         <li>حتى الساعة العاشرة مساءً</li>
                       </ul>
                     </div>
-                    <div class="col-md-3 mb-5">
+                    <div class="col-md-3 ">
                       <h5>للحجز والمواعيد</h5>
                       <ul class="list-unstyled">
                         <li>هاتف: ٠١٢٥٤٣٩٩٩٩</li>
                         <li>جوال: ٠٥٥٦٦٥٢٣٤٩</li>
                       </ul>
                     </div>
-                  <div class="col-md-5 mb-0">
+                  <div class="col-md-5">
                     <h5>موقع العيادة</h5>
                     <ul class="list-unstyled">
                       <li> مكة المكرمة – العوالي - شارع إبراهيم الجفالي -  بجوار بن داوود  </li>
@@ -50,7 +51,7 @@
                   </div>
               </div>
               <div class="row">
-                <div class="col-12 text-md-center text-left">
+                <div class="col-12 text-md-center text-right">
                   <p>
                     Copyright &copy; 2019 All rights
                   </p>

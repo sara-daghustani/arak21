@@ -1,64 +1,66 @@
+<%# This will show an appointment information%>
 
 <section class="service-sec mt-5">
-  <div class="text-center mx-auto mt-5">
+  <div class="text-center mt-5">
     <p>مجمع آراك الرقمي لطب الأسنان</p> 
-    <div class="card border-light mb-3 mx-auto text-right" >
-      <div class="card-body">
+    <div class="card border-light mb-3 text-right" >
+        <div class="card-body">
             <div class="row mb-5">
-                         <div class="col text-left">
-                          <%= link_to 'تعديل', edit_appointment_path(@appointment), class:"profile-edit-btn"  %> |
-                           <%= link_to 'المواعيد',  appointments_path , class:"profile-edit-btn"  %>
-                          </div>
-                             <h5 class="card-title text-center text-color"> تم انشاء الموعد بنجاح </h5>
-                      </div>
-
+                <div class="col ml-3 text-left">
+                    <%= link_to 'تعديل', edit_appointment_path(@appointment), class:"profile-edit-btn"  %> |
+                    <%= link_to 'رجوع', request.referer , class:"profile-edit-btn"  %>
+                </div>
+                <h5 class="text-center text-color">  الموعد  </h5>
+            </div>
             <div class="row">
-                                <div class="col-md-6">
-                                                <h6 class="mb-4"><%= @appointment.appointment_on %></h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label>:الموعد</label>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="row">
-                                        <div class="col-md-6">
-                                                <h6 class="mb-4"><%=@appointment.doctor.name%></h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label>:اسم الدكتور</label>
-                                            </div>
-                                        </div>
-                                        <%if user_signed_in?%>
-                                        <div class="row">
-                                         <div class="col-md-6">
-                                                <h6 class="mb-4">  <%= current_user.first_name+" "+ current_user.last_name%></h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label> :اسم المراجع</label>
-                                            </div>
-                                        </div>
-                                        <%if current_user.try(:admin?)%>
-                                        <div class="row">
-                                         <div class="col-md-6">
-                                                <h6 class="mb-4">  <%= @appointment.user.email%> </h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label> :البريد الإلكتروني للمريض</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                         <div class="col-md-6">
-                                                <h6 class="mb-4">  <%= @appointment.user.phone%> </h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label> :رقم جوال المراجع </label>
-                                            </div>
-                                        </div>
-                                         <%end%>
-                                         <%end%>
-                                      </div>
-      </div>
+                <div class="col-md-6">
+                    <h6 class="mb-4"><%= @appointment.appointment_on.strftime("%B %e, %Y at %I:%M %p") %></h6>
+                </div>
+                <div class="col-md-6">
+                    <label>:الموعد</label>
+                </div>                          
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 class="mb-4"><%=@appointment.doctor.name%></h6>
+                </div>
+                <div class="col-md-6">
+                    <label>:اسم الدكتور</label>
+                </div>
+            </div>
+
+<%# if user sign in it will show information user name, doctor name and date and time
+ and if u are an admin it will show the user email and phone number%>
+            <%if user_signed_in?%>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="mb-4">  <%= current_user.first_name+" "+ current_user.last_name%></h6>
+                    </div>
+                    <div class="col-md-6">
+                    <label> :اسم المراجع</label>
+                    </div>
+                </div>
+                <%if current_user.try(:admin?)%>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="mb-4">  <%= @appointment.user.email%> </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label> :البريد الإلكتروني للمراجع</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="mb-4">  <%= @appointment.user.phone%> </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label> :رقم جوال المراجع </label>
+                        </div>
+                    </div>
+                <%end%>
+            <%end%>
+            </div>
+        </div>
     </div>
   </div>
 </section>

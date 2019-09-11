@@ -7,7 +7,20 @@ class AppointmentsController < ApplicationController
   def index
     if user_signed_in?
     if current_user.admin == true
+      @search = params[:search]
+    if @search 
+   
+    @search = @search.gsub!(/\s+/, '')   if @search.match(/\s/)
+    @user = User.where(first_name: /^#{@search}/ )
+    
+    @appointments = @user.map { |user| Appointment.where({user_id: user._id}) }
+    @appointments.flatten!
+    
+    else 
+    
     @appointments = Appointment.all.order('appointment_on ASC')
+    end
+    
     else
     @appointments = current_user.appointments.order('appointment_on ASC')
     end
@@ -15,18 +28,14 @@ class AppointmentsController < ApplicationController
   end
 
 def byDoctor
-  # if user_signed_in?
-  #   if current_user.admin == true
+ 
   @doctor = Doctor.find_by(name: params[:doctor] )
   @appointments = Appointment.where({doctor_id: @doctor.id }).order('appointment_on ASC')
-#     else
 
-#     end
-#   end
  end
-  # GET /appointments/1
-  # GET /appointments/1.json
+  
   def show
+    # @appointment.appointment_on=@appointment.appointment_on.to_i
   end
 
   # GET /appointments/new
@@ -42,17 +51,24 @@ def byDoctor
   # POST /appointments.json
   def create
     # (params[:appointment])
-    
     @appointment = Appointment.new(appointment_params)
-    if params[:appointment]["appointment_on(1i)"] == "" || params[:appointment]["appointment_on(2i)"] == "" || params[:appointment]["appointment_on(3i)"] == "" || params[:appointment]["appointment_on(4i)"] == "" 
-      @appointment.appointment_on =  DateTime.current( )
-    else 
-      @appointment.appointment_on =  DateTime.new( 
-      params[:appointment]["appointment_on(1i)"].to_i,
-      params[:appointment]["appointment_on(2i)"].to_i,
-      params[:appointment]["appointment_on(3i)"].to_i,
-      params[:appointment]["appointment_on(4i)"].to_i)
-    end
+    @appointment.appointment_on = params[:appointment][:appointment_on]
+    
+    if params[:appointment][:appointment_on] == ""
+      redirect_to request.referrer, alert: 'Please Enter a valid date.'
+    else
+       
+    
+    # @appointment = Appointment.new(appointment_params)
+    # if params[:appointment]["appointment_on(1i)"] == "" || params[:appointment]["appointment_on(2i)"] == "" || params[:appointment]["appointment_on(3i)"] == "" || params[:appointment]["appointment_on(4i)"] == "" 
+    #   @appointment.appointment_on =  DateTime.current( )
+    # else 
+    #   @appointment.appointment_on =  DateTime.new( 
+    #   params[:appointment]["appointment_on(1i)"].to_i,
+    #   params[:appointment]["appointment_on(2i)"].to_i,
+    #   params[:appointment]["appointment_on(3i)"].to_i,
+    #   params[:appointment]["appointment_on(4i)"].to_i)
+    # end
    
     # params[:appointment]["appointment_on(5i)"].to_i
     # @appointment.appointment_on = params[:appointment]
@@ -70,6 +86,8 @@ def byDoctor
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
       end
     end
+  
+  end
   
   end
 
