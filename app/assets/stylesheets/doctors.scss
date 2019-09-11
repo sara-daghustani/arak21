@@ -5,6 +5,13 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 
+// Place all the styles related to the doctors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
 
 .card {
     padding-top: 20px;
@@ -17,23 +24,17 @@
     border-radius: 3px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   
 }
-.card_shadow{
-    box-shadow: 3px 3px 3px 3px  #8e8c8c80;
-}
+
 
 .card .card-body {
     padding: 0 20px;
     margin-top: 20px;
 }
-
-
-
 
 .card.hovercard {
     position: relative;
@@ -103,6 +104,8 @@
     max-height: 300px;
     min-width: 260px;
     max-width: 260px;
+    box-shadow: 3px 3px 3px 3px  #8e8c8c80;
+    justify-content: center;
 }
 
 

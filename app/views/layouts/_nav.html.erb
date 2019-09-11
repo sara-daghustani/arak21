@@ -11,9 +11,9 @@
             <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
                 <%= image_tag("arak-logo.png",alt:"Third slide", height: '70', width: '70' ,alt:'logo',title:'ARAK') %>
             </a>
-            <div class="w-100 text-right">
-            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <div class="w-100 text-right mt-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fa fa-bars mt-0"></i></span>
           </button>
             </div>
         </div>
@@ -38,14 +38,14 @@
                         <%end%>
 
                             <li class="nav-item">
-                                <%=link_to "إنشاء موعد ", new_appointment_path, class:"nav-link"%>
+                                <%=link_to "إنشاء موعد ", new_appointment_path, class:"nav-link felx-content"%>
                             </li>
 
                             <li class="nav-item">
-                                <%=link_to "عائلة آراك  ", doctors_path, class:"nav-link"%>
+                                <%=link_to "عائلة آراك  ", doctors_path, class:"nav-link felx-content"%>
                             </li>
                             <li class="nav-item">
-                                <%=link_to "من نحن", aboutus_path, class:"nav-link"%>
+                                <%=link_to "من نحن", aboutus_path, class:"nav-link felx-content"%>
                             </li>
                             <li class="nav-item">
                                 <%=link_to "الرئيسية", home_path, class:"nav-link active"%>
