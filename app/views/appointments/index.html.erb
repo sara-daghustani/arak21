@@ -15,7 +15,7 @@
           </div>
             <%= form_tag appointments_path, :method =>'get' do%>
             <%= submit_tag 'بحث',class:"btn btn-light"%>
-            <%= text_field_tag :search, params[:search]%>
+            <%= text_field_tag :search, params[:search],placeholder: 'اسم المراجع'%>
           <% end%>
         </div>
 <%# appointment table, if uer sign it will show the appointment they made.
