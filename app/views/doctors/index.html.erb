@@ -17,61 +17,51 @@
                   <%= text_field_tag :search, params[:search]%>
                   
                   <% end%>
-                    <div class="row mt-4 ">
-                    <% @doctors.each do |doctor| %>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="image-flip ">
-                                <div class="mainflip ">
-                                    <div class="frontside card_shadow">
-                                        <div class="card hovercard">
-                                            <div class="cardheader">
-                                            </div>
-                                            <div class="avatar">
-                                                <%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image") %>
-                                            </div>
-                                            <div class="info">
-                                                <div class="title">
-                                                    <h2><%= doctor.name %></h2>
-                                                </div>
-                                                <div class="desc"><%= doctor.speciality %></div>
-                                            </div>
-                                        </div>
-                                    </div>
-​
-                                    <div class="backside ">
-                                        <div class="card hovercard">
-                                            <div class="cardheader">
-                                            <% if user_signed_in?%>
-                                            <% if current_user.admin == true %>
-                                            <%= link_to "حذف", doctor_path(doctor), method: :delete, data: {confirm:"هل أنت متأكد من الحذف ؟"}%>&nbsp;
-                                                <%= link_to "تعديل", edit_doctor_path(doctor)%>&nbsp;
-                                                <%= link_to 'إظهار', @doctor %> &nbsp;
-                                                <%end%>
-                                                <%end%>
-                                            </div>
-                                            <div class="avatar">
-                                                <%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image") %>
-                                            </div>
-                                            <div class="info">
-                                                <div class="title">
-                                                    <h5><%= doctor.name %></h5>
-                                                </div>
-                                                <div class="desc"><%= doctor.description %></div>
-                                            </div>
-                                            <hr>
-                                            <div class="bottom">
-                                                <%= link_to "موعد جديد ", new_appointment_path, class:" profile-edit-btn" %> <br>    
-                                            </div> 
-                                        </div>  
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <%end%>
-                    </div>
-                </div>
-            </div>
-    </div>
-</div>                
+                  <div class="row">
+                  <% @doctors.each do |doctor| %>
+                  <div class="m-auto">
+                      <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                          <div class="mainflip">
+                              <div class="frontside">
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          <p><%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image", class:" img-fluid") %>
+                                          <h4 class="card-title"><%= doctor.name %></h4>
+                                          <p class="card-text"><%= doctor.speciality %></p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="backside">
+                                  <div class="card">
+                                  <% if user_signed_in?%>
+                                  <% if current_user.admin == true %>
+                                  <div class="mt-2">
+                                      <%= link_to "حذف", doctor_path(doctor), method: :delete, data: {confirm:"هل أنت متأكد من الحذف ؟"}%>
+                                      <%= link_to "تعديل", edit_doctor_path(doctor)%>
+                                      <%= link_to 'إظهار', doctor_path(doctor) %> 
+                                      </div>
+                                      <%end%>
+                                      <%end%>
+                                      <div class="card-body text-center mt-4">
+                                          <h4 class="card-title"><%= doctor.name %></h4>
+                                          <p class="card-text"><%= doctor.description %></p>
+                                  <div class="card-bottom mb-5" >
+                                      <%= link_to "موعد جديد ", new_appointment_path, class:" profile-edit-btn" %> <br>    
+                                  </div> 
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                    <%end%>
+              </div>
+          </div>
+      </section>
+      <p id="notice"><%= notice %></p>
+
+             
+</div>
+</section>                         
 ​
 ​
