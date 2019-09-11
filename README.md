@@ -24,11 +24,10 @@
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
-* [Features](#roadmap)
+* [Features](#features)
 * [Contributing](#contributing)
-* [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+
 
 
 ## What is ARAK ?
@@ -57,3 +56,31 @@ boundle install
 ```
 
 ---
+## Features
+* []()Ruby on Rails
+* []()Mongoid
+* []()Bootstrap
+* []()Javascript
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+## Contact
+
+Teddy Team - [@twitter_handle](https://twitter.com/twitter_handle) 
+
+Project Link: [https://github.com/sara-daghustani/arak21](https://github.com/sara-daghustani/arak21)
+
+
+
+
+
