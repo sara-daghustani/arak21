@@ -1,3 +1,6 @@
+<%# Form for appointment it contains List of Doctors, User First and Last name,
+Date and Time of the appointment %>
+
 
 <div class="text-right">
   <%= form_with(model: appointment, local: true) do |form| %>
@@ -12,20 +15,28 @@
           </div>
       <% end %>
 
+
+<%# this is a doctor slect form it gets all doctors name by the id %>
+
      <label for="doctor_name">  :الدكتور </label><br>
      <%= form.select :doctor_id, Doctor.all.collect { |p| [ p.name, p.id ] } %> <br><br>
 
+<%# condition to check if user is signed in, if user signed in write their name and last name 
+also it will hide the user Id %>
       <% if user_signed_in?%>
           <label for="Patient">  :المراجع </label><br>
           <%= current_user.first_name + " " + current_user.last_name%><br><br>
           <%= form.hidden_field :user_id , :value => current_user.id%>
       <%end%>
 
-          <label for="user_id">  :تاريخ الموعد </label><br>
-          
+<%# the user can select the date and time. The year will start 2019, the minute it will be only every 30m. 
+start hour is at 9:00am and the end hour is at 22:00 pm depends on clinc opening and closing time %>
+
+        <label for="user_id"> :تاريخ الموعد </label><br>
           <%= form.datetime_select( :appointment_on, start_year: 2019 ,ampm: true, :minute_step => 30, start_hour: 9, end_hour: 22, prompt: {  minute: 'اختر الدقائق', hour: "اختر الساعة", day: 'اختر اليوم', month: 'اختر الشهر' , year: 'اختر السنه'} ) %>
         <br>
+
        <%= form.submit "إنشاء موعد ", class:"btn btn-light mt-4 mb-2"%>
    
-    <% end %>  
+  <% end %>  
 </div>
