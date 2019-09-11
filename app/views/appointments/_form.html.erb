@@ -32,8 +32,8 @@ also it will hide the user Id %>
 <%# the user can select the date and time. The year will start 2019, the minute it will be only every 30m. 
 start hour is at 9:00am and the end hour is at 22:00 pm depends on clinc opening and closing time %>
 
-        <label for="user_id"> :تاريخ الموعد </label><br>
-          <%= form.datetime_select( :appointment_on, start_year: 2019 ,ampm: true, :minute_step => 30, start_hour: 9, end_hour: 22, prompt: {  minute: 'اختر الدقائق', hour: "اختر الساعة", day: 'اختر اليوم', month: 'اختر الشهر' , year: 'اختر السنه'} ) %>
+          <label for="user_id">  :تاريخ الموعد </label><br>
+          <%= form.text_field :appointment_on %>
         <br>
 
        <%= form.submit "إنشاء موعد ", class:"btn btn-light mt-4 mb-2"%>
