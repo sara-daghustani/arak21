@@ -60,6 +60,8 @@ color: #78D3DB;
 }
 .navbar{
   background-color: #e9ecefcf;
+  border-bottom: 2px solid #78D3DB;
+
 }
 .navbar.top-bar {
   border-radius: 0;
@@ -68,8 +70,17 @@ color: #78D3DB;
   position: fixed;
   top:0;
   clear:both;
+ }
  
-}
+  .navbar-nav .nav-link {
+    color: #75767A;
+    font-size: 15px;
+    font-family: Cairo;
+    /* text-align: right; */
+    display: inline-block;
+    float: right;
+    border-bottom: 2px solid transparent;
+ }
 .navbar-toggler {
   border: 1px solid #fff;
   color: #fff;
