@@ -23,4 +23,5 @@ document.addEventListener("DOMContentLoaded", () => flatpickr('#appointment_appo
     maxDate: new Date().fp_incr(180),
     minTime: "09:00",
     maxTime: "22:00",
+    onReady() { this.showTimeInput = true },
 }));

@@ -35,6 +35,7 @@ def byDoctor
  end
   
   def show
+    # @appointment.appointment_on=@appointment.appointment_on.to_i
   end
 
   # GET /appointments/new
@@ -51,7 +52,9 @@ def byDoctor
   def create
     # (params[:appointment])
     @appointment = Appointment.new(appointment_params)
-    @appointment.appointment_on = params[:appointment][:appointment_on] 
+    @appointment.appointment_on = params[:appointment][:appointment_on]
+    # @appointment.appointment_on = @appointment.appointment_on.to_formatted_s(:long)
+    
     if params[:appointment][:appointment_on] == ""
       redirect_to request.referrer, alert: 'Please Enter a valid date.'
     else
