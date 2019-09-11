@@ -15,50 +15,51 @@
                             <%= submit_tag 'بحث',class:"btn btn-light"%>
                   <%= text_field_tag :search, params[:search]%>
                   <% end%>
-                 
-                        <div class="row">
-                            <% @doctors.each do |doctor| %>
-                            <div class="m-auto">
-                                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                                    <div class="mainflip">
-                                        <div class="frontside">
-                                            <div class="card">
-                                                <div class="card-body text-center">
-                                                    <p><%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image", class:" img-fluid") %>
-                                                    <h4 class="card-title"><%= doctor.name %></h4>
-                                                    <p class="card-text"><%= doctor.speciality %></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="backside">
-                                            <div class="card">
-                                            <% if user_signed_in?%>
-                                            <% if current_user.admin == true %>
-                                            <div class="mt-2">
-                                                <%= link_to "حذف", doctor_path(doctor), method: :delete, data: {confirm:"هل أنت متأكد من الحذف ؟"}%>
-                                                <%= link_to "تعديل", edit_doctor_path(doctor)%>
-                                                <%= link_to 'إظهار', doctor_path(doctor) %> 
-                                                </div>
-                                                <%end%>
-                                                <%end%>
-                                                <div class="card-body text-center mt-4">
-                                                    <h4 class="card-title"><%= doctor.name %></h4>
-                                                    <p class="card-text"><%= doctor.description %></p>
-                                            <div class="card-bottom mb-5" >
-                                                <%= link_to "موعد جديد ", new_appointment_path, class:" profile-edit-btn" %> <br>    
-                                            </div> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                              <%end%>
-                        </div>
-                    </div>
-                </section>
-                <p id="notice"><%= notice %></p>               
-    </div>
-</section>                
+                  <div class="row">
+                  <% @doctors.each do |doctor| %>
+                  <div class="m-auto">
+                      <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                          <div class="mainflip">
+                              <div class="frontside">
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          <p><%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image", class:" img-fluid") %>
+                                          <h4 class="card-title"><%= doctor.name %></h4>
+                                          <p class="card-text"><%= doctor.speciality %></p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="backside">
+                                  <div class="card">
+                                  <% if user_signed_in?%>
+                                  <% if current_user.admin == true %>
+                                  <div class="mt-2">
+                                      <%= link_to "حذف", doctor_path(doctor), method: :delete, data: {confirm:"هل أنت متأكد من الحذف ؟"}%>
+                                      <%= link_to "تعديل", edit_doctor_path(doctor)%>
+                                      <%= link_to 'إظهار', doctor_path(doctor) %> 
+                                      </div>
+                                      <%end%>
+                                      <%end%>
+                                      <div class="card-body text-center mt-4">
+                                          <h4 class="card-title"><%= doctor.name %></h4>
+                                          <p class="card-text"><%= doctor.description %></p>
+                                  <div class="card-bottom mb-5" >
+                                      <%= link_to "موعد جديد ", new_appointment_path, class:" profile-edit-btn" %> <br>    
+                                  </div> 
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                    <%end%>
+              </div>
+          </div>
+      </section>
+      <p id="notice"><%= notice %></p>
+
+             
+</div>
+</section>                         
 ​
 ​
