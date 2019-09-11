@@ -33,7 +33,7 @@ also it will hide the user Id %>
 start hour is at 9:00am and the end hour is at 22:00 pm depends on clinc opening and closing time %>
 
           <label for="user_id">  :تاريخ الموعد </label><br>
-          <%= form.text_field :appointment_on %>
+          <%= form.date_field :appointment_on, placeholder: 'اختر التاريخ والوقت', class:"text-right"  %>
         <br>
 
        <%= form.submit "إنشاء موعد ", class:"btn btn-light mt-4 mb-2"%>
