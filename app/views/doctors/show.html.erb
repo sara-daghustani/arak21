@@ -1,52 +1,50 @@
 <section class="service-sec mt-5">
-  <div class="text-center mx-auto mt-5">
-  <p>مجمع آراك الرقمي لطب الأسنان </p>
-    <div class="card bborder-light mb-3 mx-auto">
+  <div class="text-center mt-5">
+    <p>مجمع آراك الرقمي لطب الأسنان </p>
+    <div class="card bborder-light mb-3">
         <div class="card-body">
-                      <div class="row mb-5">
-                         <div class="col text-left">
-                          <%= link_to 'تعديل', edit_doctor_path(@doctor), class:"profile-edit-btn"  %> |
-                           <%= link_to 'رجوع', doctors_path, class:"profile-edit-btn"  %>
-                          </div>
-                             <h5 class="card-title text-center text-color">معلومات الدكتور</h5>
-                      </div>
-                                        <div class="row">
-                                        <div class="col-md-6">
-                                                <h6 class="mb-4"><%=@doctor.name%></h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label>:اسم الدكتور</label>
-                                            </div>
-                                        </div>
-                                        <%if user_signed_in?%>
-                                       
-                                        <div class="row">
-                                         <div class="col-md-6">
-                                                <h6 class="mb-4">  <%= @doctor.speciality %> </h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label> :التخصص</label>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="row">
-                                         <div class="col-md-6">
-                                                <h6 class="mb-4">  <%= @doctor.description %> </h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label> :المعلومات </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                         <div class="col-md-6">
-                                                <h6 class="mb-4"> <%= image_tag(@doctor.img, alt: "Doctor Image") %> </h6>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label> :صورة الدكتور</label>
-                                            </div>
-                                        </div>
-                                        <%end%>
-                                      </div>
+            <div class="row mb-5">
+                <div class="col ml-3 text-left">
+                    <%= link_to 'تعديل', edit_doctor_path(@doctor), class:"profile-edit-btn"  %> |
+                    <%= link_to 'رجوع', request.referer, class:"profile-edit-btn"  %>
+                </div>
+                <h5 class="card-title text-center text-color">معلومات الدكتور</h5>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 class="mb-4"><%=@doctor.name%></h6>
+                </div>
+                <div class="col-md-6">
+                    <label>:اسم الدكتور</label>
+                </div>
+            </div>
+            <%if user_signed_in?%>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="mb-4">  <%= @doctor.speciality %> </h6>
+                    </div>
+                    <div class="col-md-6">
+                        <label> :التخصص</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="mb-4">  <%= @doctor.description %> </h6>
+                    </div>
+                    <div class="col-md-6">
+                        <label> :المعلومات </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="mb-4"> <%= image_tag(@doctor.img, alt: "Doctor Image") %> </h6>
+                    </div>
+                    <div class="col-md-6">
+                        <label> :صورة الدكتور</label>
+                    </div>
+                </div>
+             <%end%>
+        </div>
       </div>
     </div>
 </section>
