@@ -15,16 +15,17 @@
         </div>
 <%# appointment table, if uer sign it will show the appointment they made.
 if you are admin it will show the user name %>
-        <table class=" container table text-center mb-5">
-          <thead class="thead-light">
+
+        <table class="container text-center mb-5 table-bordered table-hover">
+          <thead>
             <tr scope="col">
-              <th scope="col">اعدادات</th>
-              <th scope="col">التاريخ</th>
-              <th scope="col">التخصص</th>
-              <th scope="col">الدكتور</th>
+              <th  class="text-color ">اعدادات</th>
+              <th  class="text-color ">التاريخ</th>
+              <th class="text-color ">التخصص</th>
+              <th class="text-color ">الدكتور</th>
               <%if user_signed_in?%> 
                 <%if current_user.try(:admin?)%>
-                  <th scope="col">المراجع</th>
+                  <th class="text-color ">المراجع</th>
                 <%end%>
             </tr>
           </thead>
