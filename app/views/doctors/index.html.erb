@@ -1,19 +1,20 @@
-
 <section class="service-sec mt-5">
     <div class="mt-5 text-center mx-auto ">
       <p>مجمع آراك الرقمي لطب الأسنان </p>
-        <div class="card border-light mb-3 mx-auto mt-5 ">
-                <section id="team" class="pb-5">
-                    <div class="container">
-                        <h2 class="section-title h1"> فريق آراك </h2>
-                          <div class="text-right">
+        <div class="card border-light mb-3 mx-auto  ">
+            <div class="card-body">
+                <h5 class="card-title text-center text"> فريق اراك  </h5>      
+                
+                <div class="container ">
+                        <div class="text-right">
                             <% if current_user.try(:admin?)%>
                             <%= link_to "إضافة دكتور", new_doctor_path , class:"profile-edit-btn"%> 
                             <%end%>
                         </div>
-                            <%= form_tag doctors_path, :method =>'get' do%>
+                        <%= form_tag doctors_path, :method =>'get' do%>
                             <%= submit_tag 'بحث',class:"btn btn-light"%>
                   <%= text_field_tag :search, params[:search]%>
+                  
                   <% end%>
                   <div class="row">
                   <% @doctors.each do |doctor| %>
@@ -57,9 +58,8 @@
           </div>
       </section>
       <p id="notice"><%= notice %></p>
-
+​
              
 </div>
 </section>                         
-​
 ​
