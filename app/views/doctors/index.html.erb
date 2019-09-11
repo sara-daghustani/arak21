@@ -13,7 +13,7 @@
                         </div>
                         <%= form_tag doctors_path, :method =>'get' do%>
                             <%= submit_tag 'بحث',class:"btn btn-light"%>
-                  <%= text_field_tag :search, params[:search]%>
+                  <%= text_field_tag :search,params[:search],class:"active-blue-4 active-blue-3 "%>
                   
                   <% end%>
                   <div class="row">
@@ -35,16 +35,16 @@
                                   <% if user_signed_in?%>
                                   <% if current_user.admin == true %>
                                   <div class="mt-2">
-                                      <%= link_to "حذف", doctor_path(doctor), method: :delete, data: {confirm:"هل أنت متأكد من الحذف ؟"}%>
-                                      <%= link_to "تعديل", edit_doctor_path(doctor)%>
-                                      <%= link_to 'إظهار', doctor_path(doctor) %> 
+                                      <%= link_to "حذف", doctor_path(doctor), class:'profile-edit-btn',method: :delete, data: {confirm:"هل أنت متأكد من الحذف ؟"}%>|
+                                      <%= link_to "تعديل", edit_doctor_path(doctor),class:'profile-edit-btn'%>|
+                                      <%= link_to 'إظهار', doctor_path(doctor),class:'profile-edit-btn' %> 
                                       </div>
                                       <%end%>
                                       <%end%>
                                       <div class="card-body text-center mt-4">
                                           <h4 class="card-title"><%= doctor.name %></h4>
                                           <p class="card-text"><%= doctor.description %></p>
-                                  <div class="card-bottom mb-5" >
+                                  <div class="card-bottom  mt-5" >
                                       <%= link_to "موعد جديد ", new_appointment_path, class:" profile-edit-btn" %> <br>    
                                   </div> 
                                       </div>
