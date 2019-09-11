@@ -23,5 +23,10 @@ document.addEventListener("DOMContentLoaded", function() { flatpickr('#appointme
     maxDate: new Date().fp_incr(180),
     minTime: "09:00",
     maxTime: "22:00",
+    plugins: [new window.confirmDatePlugin({})],
+    position: "below",
+    onReady: function() {
+        this.showTimeInput = true;
+      }
 })
 });
