@@ -14,7 +14,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <h6 class="mb-4"><%= @appointment.appointment_on %></h6>
+                    <h6 class="mb-4"><%= @appointment.appointment_on.strftime("%B %e, %Y at %I:%M %p") %></h6>
                 </div>
                 <div class="col-md-6">
                     <label>:الموعد</label>

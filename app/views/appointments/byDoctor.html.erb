@@ -35,7 +35,7 @@ if you are admin it will show the user name %>
                   <td><%= link_to 'إظهار', appointment ,class:" profile-edit-btn"%> | 
                     <%= link_to 'تعديل', edit_appointment_path(appointment),class:" profile-edit-btn" %> | 
                     <%= link_to 'حذف', appointment, class:" profile-edit-btn",method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
-                  <td><%= appointment.appointment_on %></td>
+                  <td><%= appointment.appointment_on.strftime("%B %e, %Y at %I:%M %p") %></td>
                   <td><%= appointment.doctor.speciality %></td>
                   <td><%= appointment.doctor.name%></td>
                   <% if current_user.try(:admin?)%>
