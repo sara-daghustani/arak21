@@ -112,3 +112,12 @@ a.nav-link{
 a.nav-link.active{
   color:rgb(89, 92, 92);
 }
+
+.active-blue-4 input[type="text"]:focus:not([readonly]) {
+  border: 1px solid gold;
+  box-shadow: 0 0 0 1px goldenrod;
+}
+.active-blue-3 input[type="text"] {
+  border: 1px solid rgb(240, 48, 48);
+  box-shadow: 0 0 0 1px #f48f8f;
+}
