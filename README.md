@@ -1,24 +1,59 @@
-# README
+<h1  align="center"style="color:#00B5C3;">ARAK آراك </h1>
+<p align="center">
+<img src="https://i.postimg.cc/6p2JnzZr/arak-logo.png"
+     alt="Tri_logo"
+     width="100" />
+  </p>
+  <h3 style="color:#00B5C3;"align="center">Be proud of your smile
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+</h3>
 
-Things you may want to cover:
+ <h3 style="color:#00B5C3;"align="center">كن فخوراً بابتسامتك
 
-* Ruby version
 
-* System dependencies
+</h3>
+</br>
+</br>
 
-* Configuration
+</h3>
+ <h3 style="color:#392E88;"> Table of Contents
 
-* Database creation
+</h3>
 
-* Database initialization
+* [What is ARAK ?](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Installation](#installation)
+* [Features](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## What is ARAK ?
+ARAK Website it helps dentists manage their patients and clinic. Also helps in scheduling appointments for patients which is the main of it.
 
-* Deployment instructions
+### Built With
 
-* ...
+* []()Ruby on Rails
+* []()Mongoid
+* []()Bootstrap
+* []()Javascript
+
+## Getting Started
+To get a local copy up and running follow these simple steps.
+
+### Installation
+ 
+1. Clone the repo
+```sh
+git clone https:://github.com/github_username/repo.git
+```
+2. Boundle install
+
+```sh
+boundle install
+```
+
+---
