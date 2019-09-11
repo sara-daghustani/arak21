@@ -27,31 +27,28 @@
                                 <%=link_to "المواعيد", appointments_path, class:"dropdown-item text-right"%>
                                     <%=link_to "تسجيل الخروج", destroy_user_session_path, method: :delete, class:"dropdown-item text-right" %>
                         </div>
+                </li>
+                <%else%>
+                    <li class="nav-item">
+                        <%=link_to "مستخدم جديد", new_user_registration_path, class:"nav-link"%>
                     </li>
-                    <%else%>
-                        <li class="nav-item">
-                            <%=link_to "مستخدم جديد", new_user_registration_path, class:"nav-link"%>
-                        </li>
-                        <li class="nav-item">
-                            <%=link_to "تسجيل الدخول ", new_user_session_path, class:"nav-link"%>
-                        </li>
-                        <%end%>
+                    <li class="nav-item">
+                        <%=link_to "تسجيل الدخول ", new_user_session_path, class:"nav-link"%>
+                    </li>
+                    <%end%>
+                <li class="nav-item">
+                    <%=link_to "إنشاء موعد ", new_appointment_path, class:"nav-link felx-content"%>
+                </li>
 
-                            <li class="nav-item">
-                                <%=link_to "إنشاء موعد ", new_appointment_path, class:"nav-link felx-content"%>
-                            </li>
-
-                            <li class="nav-item">
-                                <%=link_to "عائلة آراك  ", doctors_path, class:"nav-link felx-content"%>
-                            </li>
-                            <li class="nav-item">
-                                <%=link_to "من نحن", aboutus_path, class:"nav-link felx-content"%>
-                            </li>
-                            <li class="nav-item">
-                                <%=link_to "الرئيسية", home_path, class:"nav-link active"%>
-                            </li>
-                            
-
+                <li class="nav-item">
+                    <%=link_to "عائلة آراك  ", doctors_path, class:"nav-link felx-content"%>
+                </li>
+                <li class="nav-item">
+                    <%=link_to "من نحن", aboutus_path, class:"nav-link felx-content"%>
+                </li>
+                <li class="nav-item">
+                    <%=link_to "الرئيسية", home_path, class:"nav-link active"%>
+                </li>
             </ul>
         </div>
     </div>

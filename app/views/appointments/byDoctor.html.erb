@@ -15,6 +15,7 @@
         </div>
 <%# appointment table, if uer sign it will show the appointment they made.
 if you are admin it will show the user name %>
+
         <table class="container text-center mb-5 table-bordered table-hover">
           <thead>
             <tr scope="col">
@@ -31,7 +32,7 @@ if you are admin it will show the user name %>
 
           <tbody>
                 <% @appointments.each do |appointment| %>
-                  <tr scope="row" >
+                  <tr>
                   <td><%= link_to 'إظهار', appointment ,class:" profile-edit-btn"%> | 
                     <%= link_to 'تعديل', edit_appointment_path(appointment),class:" profile-edit-btn" %> | 
                     <%= link_to 'حذف', appointment, class:" profile-edit-btn",method: :delete, data: { confirm: 'هل أنت متأكد من حذف الموعد ؟' } %></td>
