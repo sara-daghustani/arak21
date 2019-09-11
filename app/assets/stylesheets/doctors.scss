@@ -17,23 +17,17 @@
     border-radius: 3px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   
 }
-.card_shadow{
-    box-shadow: 3px 3px 3px 3px  #8e8c8c80;
-}
+
 
 .card .card-body {
     padding: 0 20px;
     margin-top: 20px;
 }
-
-
-
 
 .card.hovercard {
     position: relative;
@@ -103,6 +97,8 @@
     max-height: 300px;
     min-width: 260px;
     max-width: 260px;
+    box-shadow: 3px 3px 3px 3px  #8e8c8c80;
+    justify-content: center;
 }
 
 
