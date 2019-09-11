@@ -16,7 +16,7 @@
 //= require rails-ujs
 //= require_tree .
 
-document.addEventListener("DOMContentLoaded", () => flatpickr('#appointment_appointment_on', {
+document.addEventListener("DOMContentLoaded", function() { flatpickr('#appointment_appointment_on', {
     enableTime: true,
     dateFormat: "Y-m-d H:i",
     minDate: "today",
@@ -24,4 +24,5 @@ document.addEventListener("DOMContentLoaded", () => flatpickr('#appointment_appo
     minTime: "09:00",
     maxTime: "22:00",
     onReady() { this.showTimeInput = true },
-}));
+})
+});
