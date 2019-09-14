@@ -31,7 +31,7 @@ class DoctorsController < ApplicationController
   # POST /doctors
   # POST /doctors.json
   def create
-    # if current_user.admin == true
+    if current_user.admin == true
     
 
     @doctor = Doctor.new(doctor_params)
@@ -45,7 +45,7 @@ class DoctorsController < ApplicationController
         format.json { render json: @doctor.errors, status: :unprocessable_entity }
       end
     end
-  # end
+  end
   end
 
   # PATCH/PUT /doctors/1
