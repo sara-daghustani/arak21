@@ -15,13 +15,18 @@
 //= require bootstrap
 //= require rails-ujs
 //= require_tree .
-
-document.addEventListener("DOMContentLoaded", () => flatpickr('#appointment_appointment_on', {
+​
+document.addEventListener("DOMContentLoaded", function() { flatpickr('#appointment_appointment_on', {
     enableTime: true,
     dateFormat: "Y-m-d H:i",
     minDate: "today",
     maxDate: new Date().fp_incr(180),
     minTime: "09:00",
     maxTime: "22:00",
-    onReady() { this.showTimeInput = true },
-}));
+    // plugins: [new window.confirmDatePlugin({})],
+    position: "below",
+    onReady: function() {
+        this.showTimeInput = true;
+      }
+})
+});
