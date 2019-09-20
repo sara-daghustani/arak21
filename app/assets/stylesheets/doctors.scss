@@ -30,7 +30,6 @@
   
 }
 
-
 .card .card-body {
     padding: 0 20px;
     margin-top: 20px;
@@ -52,8 +51,8 @@
 
 .card.hovercard .avatar {
     position: relative;
-    top: -35px;
-    margin-bottom: -20px;
+    // top: -35px;
+    // margin-bottom: 0px;
 }
 
 .card.hovercard .avatar img {
@@ -105,7 +104,6 @@
     min-width: 260px;
     max-width: 260px;
     box-shadow: 3px 3px 3px 3px  #8e8c8c80;
-    justify-content: center;
 }
 
 
