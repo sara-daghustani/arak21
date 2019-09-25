@@ -19,6 +19,42 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
+@media (min-width: 1000px) {
+    .order-3{
+      order: 1;
+      }
+      .order-2{
+        order: 2;
+        }
+        .order-1{
+          order: 3;
+    }
+  }
+
+  @media (min-width: 768px) {
+  
+      .order-3{
+        order: 1;
+        }
+        .order-2{
+          order: 2;
+          }
+          .order-1{
+            order: 3;
+      } }
+  @media (min-width: 992px) {
+  
+      .order-3{
+        order: 1;
+        }
+        .order-2{
+          order: 2;
+          }
+          .order-1{
+            order: 3;
+      }
+    }
+  
 
 img{
   vertical-align:none; 
