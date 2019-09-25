@@ -1,11 +1,11 @@
 <section class="service-sec mt-5">
     <div class="mt-5 text-center ">
       <p>مجمع آراك الرقمي لطب الأسنان </p>
-        <div class="card border-light mb-3  ">
+        <div class="card border-light mb-4">
             <div class="card-body">
                 <h5 class="card-title text-center text"> فريق آراك </h5>      
                 
-                <div class="container ">
+                <div class="container">
                         <div class="text-right">
                             <% if current_user.try(:admin?)%>
                             <%= link_to "إضافة دكتور", new_doctor_path , class:"profile-edit-btn"%> 
@@ -22,7 +22,7 @@
                           <div class="mainflip">
                               <div class="frontside">
                                   <div class="card">
-                                      <div class="card-body text-center">
+                                      <div class="card-body text-center mt-1">
                                           <p><%= image_tag(doctor.img, size: "150x150", alt: "Doctor Image", class:" img-fluid") %>
                                           <h4 class="card-title">د. 
                                           <%= doctor.name %></h4>
@@ -41,10 +41,10 @@
                                     </div>
                                       <%end%>
                                       <%end%>
-                                      <div class="card-body text-center mt-4">
+                                      <div class="card-body text-center mt-3">
                                           <h4 class="card-title"><%= doctor.name %></h4>
                                           <p class="card-text"><%= doctor.description %></p>
-                                  <div class="card-bottom  mt-5" >
+                                  <div class="card-bottom  mt-3" >
                                       <%= link_to "موعد جديد ", new_appointment_path, class:" profile-edit-btn" %> <br>    
                                   </div> 
                                       </div>
