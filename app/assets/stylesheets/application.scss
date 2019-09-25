@@ -20,6 +20,8 @@
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
 
+
+
   
   .edit-links:hover {
     color: gray;
@@ -79,10 +81,11 @@ color: #78D3DB;
     float: right;
     border-bottom: 2px solid transparent;
  }
- 
 .navbar-toggler {
   border: 1px solid #fff;
   color: #fff;
+  position: absolute;
+  right: 21px;
 }
 
 .top-bar a.navbar-brand {
