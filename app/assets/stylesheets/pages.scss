@@ -53,17 +53,20 @@
     height:auto;} }
 @media (min-width: 768px) {
   .img-d {
-
-    height:auto; } }
+    height:auto; } 
+  }
 @media (min-width: 992px) {
   .img-d {
    
-    height:auto;} }
+    height:auto;
+  }
+ 
+  }
+
     @media (min-width: 1000px) {
       .img-d {
-       
-        height:100vh;} }
-
+        height:100vh;}
+      }
 
 
 .links a{
