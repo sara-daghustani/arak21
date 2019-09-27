@@ -39,26 +39,26 @@
 
 .img-d{
   width: 100vw;
-  height:100vh;
+  // height:100vh;
 }
 
 
 
 @media (min-width: 300px) {
   .img-d {
-    height:auto;} }
+    height:70vh;} }
 @media (min-width: 576px) {
   .img-d {
  
-    height:auto;} }
+    height:85vh;} }
 @media (min-width: 768px) {
   .img-d {
-    height:auto; } 
+    height:90vh; } 
   }
 @media (min-width: 992px) {
   .img-d {
    
-    height:auto;
+    height:95vh;
   }
  
   }
