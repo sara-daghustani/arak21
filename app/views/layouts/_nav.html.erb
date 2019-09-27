@@ -6,14 +6,16 @@
         <div class="d-flex flex-grow-1">
             
             <a class="navbar-brand d-none d-lg-inline-block" href="/home">
-                <%= image_tag("arak-logo.png",alt:"Third slide", height: '70', width: '70',alt:'logo' ) %>
+                <%= image_tag("arak-logo.png", height: '70', width: '70',alt:'logo' ) %>
             </a>
             <a class="d-lg-none " href="/home">
-                <%= image_tag("arak-logo.png",alt:"Third slide", height: '70', width: '70' ,alt:'logo',title:'ARAK') %>
+                <%= image_tag("arak-logo.png", height: '70', width: '70' ,alt:'logo',title:'ARAK') %>
             </a>
             <div class="w-100 text-right mt-3">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <img src="menu.svg" style="width: 45px;height: 40px;" />
+            <%= image_tag("menu.svg", height: '40px', width: '45') %>
+
+            <%# <img src="" style="width: 45px;height: 40px;" /> %>
             </button>
             </div>
         </div>
