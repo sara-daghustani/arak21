@@ -117,6 +117,7 @@ rails s
                 <li> Phone is authenticated to be in 10 characters </li>
                 <li> An appointment authenticated to date and time. </li>
                 <li> The website connected to the clinic domain</li>
+                <li> Applity to Search Doctors</li>
  </ul>
 
 ---
