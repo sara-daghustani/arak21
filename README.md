@@ -51,7 +51,11 @@ rails s
 ---
 <h5> Wireframe :</h5>
 <img src="/ArakHome.png" alt="Image">
+
+---
 <img src="/ArakDoctor.png" alt="Image">
+
+---
 <img src="/ArakAbout.png" alt="Image">
 
 ----
