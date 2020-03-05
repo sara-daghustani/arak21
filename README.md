@@ -20,12 +20,12 @@ Moreover, dentists can manage their patients and the clinic. The website built i
 
 ---
 
-## Getting Started
+### Getting Started
 To get a local copy up and running follow these simple steps.
 
-### Installation
+#### Installation
  
-1. Clone the repo
+1. Fork and Clone the repo
 ```sh
 git clone https:://github.com/github_username/repo.git
 ```
@@ -34,13 +34,19 @@ git clone https:://github.com/github_username/repo.git
 ```sh
 boundle install
 ```
-3. Start Server
+3. Initialize the database
+
+```shell
+rails db:create db:migrate db:seed
+```
+
+4. Start Server
 
 ```sh
 rails s
 ```
-
 ----
+
 <h5> ScreenShots :</h5>
 <img src="/Arak.png" alt="Image" >
 <img src="/arak1.png" alt="Image" >
