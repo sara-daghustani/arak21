@@ -8,7 +8,7 @@
 <h3 style="color:#00B5C3;"align="center">كن فخوراً بابتسامتك </h3>
 </br>
 
-<h5> Date Project:  2019. </h5> 
+<h5> Project Date:  2019. </h5> 
 <h5> Client:  Arak Clinic.</h5> 
 <h5> Website:</h5> 
 <p><a href="http://www.arakclinics.com/" class="">http://www.arakclinics.com/</a></p>
