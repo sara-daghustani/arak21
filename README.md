@@ -12,7 +12,7 @@
 <h5> Client:  Arak Clinic.</h5> 
 <h5> Website:</h5> 
 <p><a href="http://www.arakclinics.com/" class="">http://www.arakclinics.com/</a></p>
-</br>
+
 <h4>Arak Digital Dental Clinics </h4>
 <p>The Project is developed for a Dental Clinic. 
 The website contains clinic information, and it helps with scheduling and managing appointments for patients. 
@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple steps.
  
 1. Fork and Clone the repo
 ```sh
-git clone https:://github.com/github_username/repo.git
+git clone https://github.com/github_username/repo.git
 ```
 2. Boundle install
 
